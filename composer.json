@@ -21,11 +21,11 @@
         "wpackio/enqueue": "~2.2.0"
     },
 	"require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"symplify/coding-standard": "*",
 		"phpcompatibility/php-compatibility": "*",
 		"wp-coding-standards/wpcs": "*",
-		"automattic/vipwpcs": "^2.2"
+		"automattic/vipwpcs": "*"
 	},
 
 	"scripts": {
