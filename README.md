@@ -16,7 +16,7 @@ Tested up to WordPress 5.3.2 and Genesis 3.3.0.
 * Autoprefixer to make your CSS work with needed vendor prefixes
 * Minify and bundle code with [Webpack](https://webpack.github.io/)
 * Split large files and enqueue the generated parts
-* Synch browser testing with Browsersync][browsersync](http://www.browsersync.io/)
+* Synch browser testing with [Browsersync](http://www.browsersync.io/)
 
 ## Requirements
 
