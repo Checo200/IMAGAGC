@@ -23,7 +23,7 @@
     "defaults"
   ],
   "dependencies": {
-    "animate.css": "~4.1.0",
+    "animate.css": "~4.1.1",
     "headroom.js": "~0.11.0",
     "normalize-scss": "~7.0.1",
     "sass-mq": "~5.0.1"
