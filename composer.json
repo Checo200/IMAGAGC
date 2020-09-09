@@ -22,7 +22,7 @@
     },
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
-		"object-calisthenics/phpcs-calisthenics-rules": "*",
+		"symplify/coding-standard": "*",
 		"phpcompatibility/php-compatibility": "*",
 		"wp-coding-standards/wpcs": "*",
 		"automattic/vipwpcs": "*"
