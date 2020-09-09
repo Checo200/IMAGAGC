@@ -4,7 +4,7 @@
  *
  * This file adds support for Gutenberg blocks.
  *
- * @package Zen
+ * @package IMAGAGC
  * @author  NicBeltramelli
  * @license GPL-2.0-or-later
  * @link    https://github.com/NicBeltramelli/zen.git

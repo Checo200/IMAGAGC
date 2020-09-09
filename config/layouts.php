@@ -4,7 +4,7 @@
  *
  * This file overrides `genesis/config/layouts.php` to set default theme layouts.
  *
- * @package Zen
+ * @package IMAGAGC
  * @author  NicBeltramelli
  * @license GPL-2.0-or-later
  * @link    https://github.com/NicBeltramelli/zen.git

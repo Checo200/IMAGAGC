@@ -8,10 +8,10 @@ module.exports = {
 	slug: 'zen', // Plugin or Theme slug, basically the directory name under `wp-content/<themes|plugins>`
 	// Used to generate banners on top of compiled stuff
 	bannerConfig: {
-		name: 'zen',
-		author: 'Nic Beltramelli',
+		name: 'IMAGAGC',
+		author: 'IMAGA',
 		license: 'GPL-2.0-or-later',
-		link: 'https://github.com/NicBeltramelli/zen',
+		link: 'https://github.com/Checo200/IMAGAGC',
 		version: pkg.version,
 		copyrightText:
 			'This software is released under the GPL-2.0-or-later License\nhttps://spdx.org/licenses/GPL-2.0-or-later.html',

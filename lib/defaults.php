@@ -4,7 +4,7 @@
  *
  * This file configures the default theme settings.
  *
- * @package Zen
+ * @package IMAGAGC
  * @author  NicBeltramelli
  * @license GPL-2.0-or-later
  * @link    https://github.com/NicBeltramelli/zen.git

@@ -4,8 +4,8 @@
  *
  * This file adds the search template.
  *
- * @package Zen
- * @author  NicBeltramelli
+ * @package IMAGAGC
+ * @author  NicBeltramelli  |  IMAGA
  * @license GPL-2.0-or-later
  * @link    https://github.com/NicBeltramelli/zen.git
  */
