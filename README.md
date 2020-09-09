@@ -1,4 +1,4 @@
-# Zen theme
+# IMAGAGC theme
 
 [![Packagist](https://img.shields.io/packagist/v/nicbeltramelli/zen.svg?style=for-the-badge)](https://packagist.org/packages/nicbeltramelli/zen)
 [![Codacy Badge](https://img.shields.io/codacy/grade/b6b22681b33c46c0bef7cd8d25bf21d1?style=for-the-badge)](https://app.codacy.com/manual/NicBeltramelli/zen)
