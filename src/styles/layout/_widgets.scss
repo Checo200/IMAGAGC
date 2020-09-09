@@ -1,0 +1,89 @@
+/**
+* Widgets
+*
+*	- Global Widgets
+*		- Widget Calendar
+*/
+
+/* Global Widgets */
+
+.widget {
+
+	margin-bottom: space(m);
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	p {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	li {
+
+		li {
+			border: 0;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	ol {
+
+		> li {
+			list-style-position: inside;
+			list-style-type: decimal;
+			padding-left: space(s);
+			text-indent: -(space(s));
+		}
+	}
+
+	ul {
+
+		li {
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	/* Widget Calendar */
+
+	&.widget_calendar {
+
+		table {
+			border-collapse: separate;
+			border-spacing: space(xxs);
+			border-top: 0;
+			margin-bottom: 1.5rem; // Compensate bottom border spacing.
+			margin-top: 0;
+
+			&:last-of-type {
+				margin-bottom: -(space(xxs)); // Compensate last bottom border spacing.
+			}
+
+			caption {
+				margin-bottom: 1.5rem; // Compensate top border spacing.
+			}
+
+			td,
+			th {
+				border: 0;
+				text-align: center;
+				padding: calc(1rem - 0.25rem) 1rem calc(1rem - 0.25rem); // Compensate inner border spacing.
+			}
+
+			td {
+				background: color(light, base);
+			}
+
+			th {
+				background: color(light, strong);
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+/* Forms */
+
+input,
+select,
+textarea {
+	background: transparent;
+	border: 1px solid color(border);
+	border-radius: $base-border-radius;
+	color: color(dark, base);
+	font-weight: 400;
+	max-width: 100%;
+	padding: space(xs);
+
+	@extend %font-size-s;
+}
+
+input {
+	height: space(m); // Preserve height despite border.
+
+	&[type="checkbox"],
+	&[type="radio"] {
+		margin: space(right, xxs);
+		height: space(s); // Preserve height despite border.
+		padding: 0;
+		vertical-align: top;
+		width: auto;
+	}
+
+	&[type="image"] {
+		margin: 0;
+		padding: 0;
+		width: auto;
+	}
+
+	&[type="search"] {
+
+		&::-webkit-search-cancel-button,
+		&::-webkit-search-results-button {
+			display: none;
+		}
+	}
+
+	&[type="submit"] {
+
+		.has-dark-background & {
+			background: color(accent, base);
+		}
+	}
+}
+
+select {
+	height: space(m);
+}
+
+textarea {
+	height: space(xxl); // Preserve height despite border.
+}
+
+input,
+textarea {
+
+	&:focus {
+		border: 1px solid color(dark, soft);
+		outline: none;
+		transition: all $base-transition;
+	}
+}
+
+::-moz-placeholder {
+	color: color(dark, base);
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: color(dark, base);
+}

@@ -1,0 +1,16 @@
+/* Avatar */
+
+.avatar {
+	border-radius: 50%;
+	float: left;
+	height: space(m);
+	margin: space(right-bottom, xs);
+	width: space(m);
+}
+
+.alignright {
+
+	.avatar {
+		margin: space(left-bottom, xs);
+	}
+}

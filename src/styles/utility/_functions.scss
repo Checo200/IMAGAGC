@@ -1,0 +1,132 @@
+/**
+* Functions
+*
+*	- Breakpoint
+*	- Root Font Size
+*	- Font Size
+*	- Line Height
+*	- Space
+*	- Color
+*/
+
+/*
+* Breakpoint
+*
+* Retrieve values from $mq-breakpoints map defined in utility/variables.
+* Usage example: div { max-width: breakpoint(desktop); }
+*/
+
+@function breakpoint($size, $size-variant:null) {
+
+	@if ($size-variant != null) {
+		// map inception.
+		@return map-get(map-get($mq-breakpoints, $size), $size-variant);
+	}
+
+	@else {
+
+		@return map-get($mq-breakpoints, $size);
+	}
+}
+
+/*
+* Root Font Size
+*
+* Retrieve values from $base-grid map defined in utility/variables.
+* Usage example: html { font-size: root-font-size(phone); }
+*/
+
+@function root-font-size($size, $size-variant:null) {
+
+	@if ($size-variant != null) {
+		// map inception.
+		@return map-get(map-get($base-grid, $size), $size-variant);
+	}
+
+	@else {
+
+		@return map-get($base-grid, $size);
+	}
+}
+
+/*
+* Font Size
+*
+* Retrieve values from $font-size map defined in utility/variables.
+* Usage example: p { font-size: font-size(phone, m); }
+*/
+
+@function font-size($size, $size-variant:null) {
+
+	@if ($size-variant != null) {
+		// map inception.
+		@return map-get(map-get($base-font-sizes, $size), $size-variant);
+	}
+
+	@else {
+
+		@return map-get($base-font-sizes, $size);
+	}
+}
+
+/*
+* Line Height
+*
+* Retrieve values from $base-line-height map defined in utility/variables.
+* Usage example: p { line-height: line-height(m); }
+*/
+
+@function line-height($size, $size-variant:null) {
+
+	@if ($size-variant != null) {
+		// map inception.
+		@return map-get(map-get($base-line-height, $size), $size-variant);
+	}
+
+	@else {
+
+		@return map-get($base-line-height, $size);
+	}
+}
+
+/*
+* Space
+*
+* Retrieve values from $base-space map defined in utility/variables.
+* Usage example: p { margin: space(m); }
+* Usage example with nested values: p { margin: space(stack, m); }
+*/
+
+@function space($size, $size-variant:null) {
+
+	@if ($size-variant != null) {
+		// map inception.
+		@return map-get(map-get($base-space, $size), $size-variant);
+	}
+
+	@else {
+
+		@return map-get($base-space, $size);
+	}
+}
+
+/*
+* Color
+*
+* Retrieve values from $base-colors map defined in utility/variables.
+* Usage example: div { border: 1px solid color(border); }
+* Usage example with nested values: a { color: color(accent, base); }
+*/
+
+@function color($color-name, $color-variant:null) {
+
+	@if ($color-variant != null) {
+		// map inception.
+		@return map-get(map-get($base-colors, $color-name), $color-variant);
+	}
+
+	@else {
+
+		@return map-get($base-colors, $color-name);
+	}
+}

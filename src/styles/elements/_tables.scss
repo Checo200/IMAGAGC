@@ -1,0 +1,20 @@
+/* Tables */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-top: 1px solid color(border);
+	margin: 0 0 calc(2rem - 1px); // Compensate top border.
+	width: 100%;
+}
+
+th,
+td {
+	border-left: 1px solid color(border);
+	border-right: 1px solid color(border);
+	border-bottom: 1px solid color(border);
+	padding: space(xs);
+	text-align: left;
+
+	@extend %font-size-s;
+}

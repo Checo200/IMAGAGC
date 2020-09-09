@@ -1,0 +1,41 @@
+/* WooCommerce Variables
+---------------------------------------------
+* Values defined in utility/variables.
+--------------------------------------------- */
+
+$woocommerce:		color(accent, base);
+$green:				color(success, base);
+$red:				color(danger, base);
+$warning:			color(warning, base);
+$blue:				color(info, base);
+$star:				color(star, base);
+
+// Primary color for buttons (alt)
+$primary:			color(accent, base);
+
+// Text on primary color bg - Buttons bg
+$primarytext:		color(dark, base);
+
+// Sales flash
+$highlight:			color(accent, base);
+
+// Text on highlight color bg
+$highlightext:		color(light, soft);
+
+// Content BG - Tabs (active state) - Buttons color
+$contentbg:			color(light, soft);
+
+// Secondary background - Buttons disabled bg
+$secondarybg:		color(light, base);
+
+// Small - breadcrumbs - Labels - Buttons disabled color
+$subtext:			color(dark, soft);
+
+// Border
+$border:			color(border);
+
+// Box shadow
+$shadow:			color(shadow);
+
+// Even tab row on small screen
+$even:				rgba(0, 0, 0, 0.025);

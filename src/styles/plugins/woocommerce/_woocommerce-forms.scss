@@ -1,0 +1,257 @@
+/**
+* WooCommerce Forms
+*
+*	- Select
+*	- Form Default
+*	- Shipping Calculator
+*	- Shipping Method
+*	- Quantity
+*/
+
+.woocommerce {
+
+	/* Select */
+
+	select {
+		height: space(m);
+		vertical-align: middle;
+	}
+
+	.select2-container,
+	.select2-container--default {
+		vertical-align: middle;
+
+		.select2-selection--single {
+			border: 1px solid $border;
+			border-radius: $base-border-radius;
+			height: space(m);
+			line-height: line-height(s);
+			margin: 0;
+			text-align: left;
+
+			.select2-selection__rendered {
+				color: $primarytext;
+				line-height: line-height(s);
+				padding: space(xs);
+
+				.select2-selection__placeholder {
+					color: $primarytext;
+					line-height: line-height(s);
+				}
+			}
+
+			.select2-selection__arrow {
+				height: space(s);
+				right: space(xs);
+				top: space(xs);
+
+				b {
+					border-color: $primarytext transparent transparent transparent;
+				}
+			}
+		}
+	}
+
+	/* Form Default */
+
+	form .form-row {
+		margin: space(stack, s);
+		padding: 0;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		label {
+			color: $subtext;
+			font-weight: 700;
+			line-height: line-height(s);
+			vertical-align: middle;
+		}
+
+		em {
+			clear: both;
+			float: left;
+			padding: space(xs);
+			width: 100%;
+
+			@extend %font-size-s;
+		}
+
+		.woocommerce-input-wrapper {
+			line-height: space(m);
+
+			.description {
+				background: $blue;
+				border-radius: $base-border-radius;
+				color: $contentbg;
+				margin: space(top, xxs);
+				padding: space(inset-squish, xxs);
+
+				@extend %font-size-s;
+
+				a {
+					color: $contentbg;
+				}
+
+				&::before {
+					border-color: $blue transparent transparent transparent;
+				}
+			}
+		}
+
+		.required {
+			color: $red;
+		}
+
+		input.input-text,
+		textarea {
+			padding: space(xs);
+
+			@extend %font-size-s;
+		}
+
+		input.input-checkbox {
+			margin: 0 0.5em 0 0;
+			height: space(s); // Preserve height despite border.
+		}
+
+		textarea {
+			height: space(l);
+		}
+
+		&.woocommerce-invalid {
+
+			label {
+				color: $red;
+			}
+
+			.select2-container,
+			input.input-text,
+			select {
+				border-color: $red;
+			}
+		}
+
+		&.woocommerce-validated {
+
+			.select2-container,
+			input.input-text,
+			select {
+				border-color: $green;
+			}
+		}
+
+		::-webkit-input-placeholder {
+			line-height: line-height(s);
+		}
+
+		:-moz-placeholder {
+			line-height: line-height(s);
+		}
+
+		:-ms-input-placeholder {
+			line-height: line-height(s);
+		}
+	}
+
+	form.login,
+	form.checkout_coupon,
+	form.register {
+		border: none;
+		border-radius: $base-border-radius;
+		margin: space(stack, s);
+		padding: space(xs);
+
+		@extend %font-size-s;
+
+		.woocommerce-form-login__rememberme {
+			margin-top: space(xs);
+		}
+
+		#rememberme {
+			margin: 0 space(xxs) 0 space(xs);
+		}
+	}
+
+	form.login,
+	form.register {
+		padding: space(s);
+	}
+
+	/* Form Shipping */
+
+	form.woocommerce-shipping-calculator {
+
+		p {
+			margin-bottom: 0;
+
+			&.form-row {
+				margin: space(stack, xs);
+			}
+		}
+
+		input,
+		button {
+			height: 3rem;
+		}
+
+		input {
+			padding: space(xxs);
+		}
+
+		button {
+			padding: space(inset-squish, xxs);
+
+			@extend %font-size-xs;
+		}
+
+		.shipping-calculator-form {
+			margin: space(top, xs); // Break vertical rhythm.
+
+			.select2-selection--single {
+				height: 3rem;
+
+				.select2-selection__rendered {
+					padding: space(xxs);
+				}
+
+				.select2-selection__arrow {
+					right: space(xxs);
+					top: space(xxs);
+				}
+			}
+		}
+	}
+
+	/* Shipping Method */
+
+	ul#shipping_method {
+
+		li {
+			line-height: line-height(s);
+			margin: space(stack, xxs);
+
+			input {
+				margin: 0 0.5em 0 0;
+			}
+		}
+
+		.amount {
+			font-weight: inherit;
+		}
+	}
+
+	/* Quantity */
+
+	.quantity {
+
+		.qty {
+			padding: space(xs);
+			text-align: center;
+			width: space(l);
+
+			@extend %font-size-m;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+/**
+* Accessibility
+*
+*	- Screen Reader Text
+*	- Skip Links
+*	- Outline on Focus
+*/
+
+/* Screen Reader Text */
+
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.widget_search input[type="submit"]:focus,
+.genesis-nav-menu .search input[type="submit"]:focus {
+	clip: auto !important;
+	height: auto;
+	width: auto;
+	display: block;
+	font-weight: 700;
+	color: color(dark, strong);
+	background: color(light, soft);
+	z-index: 100000; // Above WP toolbar.
+	text-decoration: none;
+	border: none;
+
+	@extend %box-shadow;
+}
+
+/* Skip Links */
+
+.genesis-skip-link {
+	margin: 0;
+
+	.skip-link-hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+	li {
+		height: 0;
+		list-style: none;
+		width: 0;
+	}
+}
+
+/* Outline on Focus */
+
+:focus {
+	outline: 0;
+}
