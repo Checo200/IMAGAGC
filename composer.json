@@ -29,7 +29,7 @@
 	},
 
 	"scripts": {
-        "phpcs": "./vendor/bin/phpcs ",
-        "phpcbf": "./vendor/bin/phpcbf --report=diff -vv"
+        "phpcs": "vendor/bin/phpcs ",
+        "phpcbf": "vendor/bin/phpcbf --report=diff -vv"
     }
 }
