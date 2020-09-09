@@ -14,12 +14,12 @@ matrix:
   allow_failures:
     - php: nightly
 
-#cache:
-#  apt: true
-#  directories:
-#    - $HOME/.composer/cache
-#    - $HOME/.yarn-cache
-#    - vendor
+cache:
+  apt: true
+  directories:
+    - $HOME/.composer/cache
+    - $HOME/.yarn-cache
+    - vendor
 
 branches:
   except:
