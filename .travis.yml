@@ -9,7 +9,7 @@ php:
   - nightly
 
 env:
-  - TRAVIS_NODE_VERSION="14"
+  - TRAVIS_NODE_VERSION="14.0.0"
 
 matrix:
   fast_finish: true
