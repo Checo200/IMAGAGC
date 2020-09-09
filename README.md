@@ -1,12 +1,9 @@
 # IMAGAGC theme
 
-[![Packagist](https://img.shields.io/packagist/v/nicbeltramelli/zen.svg?style=for-the-badge)](https://packagist.org/packages/nicbeltramelli/zen)
-[![Codacy Badge](https://img.shields.io/codacy/grade/b6b22681b33c46c0bef7cd8d25bf21d1?style=for-the-badge)](https://app.codacy.com/manual/NicBeltramelli/zen)
-[![Build Status](https://img.shields.io/travis/NicBeltramelli/zen.svg?style=for-the-badge)](https://travis-ci.org/NicBeltramelli/zen)
+IMAGAGC is a child theme for the Genesis Framework with a modern development workflow. The name IMAGAGC stands for IMAGA Genesis Child.It's based and forked from Zen [Live Demo - Zen](https://beltramelli.app/zen/).
+This starter them from beltramelli is used as a base to build upon. All credits and big kudos to beltramelli. Check the original repo [zen](https://github.com/NicBeltramelli/zen) out.
 
-Zen is a child theme for the Genesis Framework with a modern development workflow. [Live Demo](https://beltramelli.app/zen/)
-
-Tested up to WordPress 5.3.2 and Genesis 3.3.0.
+Tested up to WordPress 5.5.1 and Genesis 3.3.0.
 
 ## Features
 
@@ -38,7 +35,7 @@ Using this setup with Local by Flywheel and WSL2.
 
 ### Setup Local by flywheel [flywheel](https://localwp.com/) with WSL2 [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
 
-There are a couple of extra steps when making this setup work. This will guide you through those steps.
+To make this work out of the box, there are only a couple of extra steps we need to take.
 First make sure you know the ip adress of you Windows10 machine and the ip adress of your WSL2 setup.
 
 Find ip address for Windows10:
@@ -71,34 +68,25 @@ Write down ip address from WSL2.
 
 Once we figured out the ip adresses from both machines, its time to setup Local by Flywheel + our wpackio.
 
-First we will change the proxy settings from Flywheel. NOTE: This may give errors in the Flywheel by local GUI (Graphic User Interface).
+Go to the Directory where [Local by Flywheel](https://localwp.com/) is installed by either using the Application or going to the right directory with explorer.
 
-Go to the Directory where Local by Flywheel is installed by either using the Application or going to the right directory with explorer.
+## Explorer path
 
-Explorer path:
+*Example explorer path:*
 
 ```shell
 C:\Users\$username\AppData\Roaming\Local\run\router\nginx\conf
 ```
 
-Don't forget to change the $username to your actual username.
+Don't forget to change the Disk drive letter where [Local by Flywheel](https://localwp.com/) is installed (default on C:\)and the username `$username` to your actual username.
 
-GUI:
+## GUI
 
-Open Local by Flywheel GUI, go to the left corner, click on the hamburger menu to open settings.
+Open [Local by Flywheel](https://localwp.com/) GUI, go to the left corner, click on the hamburger menu to open settings.
 In the hamburger menu, click on Reveal Local Router's log. This will open the directory we are looking for. In this directory you can see a map named "conf".
 Double click on this map and find the configuration file or youre website, made by Local.
 
-Change the proxy from 127.0.0.1 to the WSL2 ip adress we wrote down earlier. In my case this was 172.27.45.111.
-
-```shell
-# Example: what to change (change both locations ip addresses in this file).
-location / {
-    proxy_pass http://$ip-address-WSL2:10047;
-    include location-block.conf;
-```
-
-Also note that there is a port number behind the ip address, write this also down since we need it configure our wpackio.
+Write down the the port that [Local by Flywheel](https://localwp.com/) assigned your local website since we need it to configure our wpackio configuration.
 
 Next we fill in our wpackio dev server configuration:
 
@@ -115,15 +103,15 @@ module.exports = {
 // If you intend to access it from your LAN (probably do?)
 // If you keep null, then wpackio-scripts will try to determine your LAN IP
 // on it's own, which might not always be satisfying. But it is in most cases.
-host: '172.27.45.111', # Change to WSL2 ip address
+host: undefined, # You can leave this unchanged. If for some reason wpackio can't find the ip address from WSL2, change the ip address to WSL2 ip address (We did this in the steps above).
 // Your WordPress development server address
 // This is super important
-proxy: 'http://sander.local', # The name of your local .local site
+proxy: 'http://$your-own-theme.local', # The name of your local .local site (Example: your-own-theme.local) - if using https, don't forget to change http to https
 // PORT on your localhost where you would want live server to hook
-port: 10047, # The port you wrote down from the nginx settings in local
+port: $local-by-flyhweel-portnumber, # The port you wrote down from the nginx settings in local (Example: 10034)
 // UI passed directly to browsersync
 ui: {
-    port: 3001, # You can leave this default or change to an availalbe port.
+    port: 3001, # You can leave this default or change to an availalbe port (default 3001).
 },
 // Whether to show the "BrowserSync Connected"
 notify: true,
@@ -137,31 +125,34 @@ ghostMode: {
 },
 // Override system calculated public path of the `dist` directory
 // This must have forward slash, otherwise it will not work.
-distPublicPath: '/wp-content/themes/sander/dist/', # After theme, type in your-own-theme name created earlier with composer
+distPublicPath: '/wp-content/themes/$your-own-theme/dist/', # After theme, type in $your-own-theme name created earlier with composer
 };
 ```
 
-The only thing left to do is updating the WSL2 host config file. We can do that with the following command:
+Now we need to update the WSL2 host config file. We can do that with the following command:
 
 ```shell
+# Feel free to use any editor of choice (vim, nano etc)
+# If you would like to use nano type $ sudo apt install nano
 sudo nano /etc/hosts
 ```
 
-In here, add the name from local (somename.local) + add the ip address from your Windows10 machine
+In here, add the name from local (somename.local) + add the ip address from your Windows10 machine.
+
+Note: This instruction is especially written down for nano (different editors might have different shortcuts).
 Save the file by clicking ctrl+x and type y (enter).
 
-Once this is done, we can startup our wpackio with Yarn
+Once this is done, we can startup our wpackio with Yarn (`yarn start`)
 
-Make sure to change this whenever your ip addresses changed, otherwise it won't work.
-This is a workaround, since i didn't find any other workable way to make this work.
+Make sure to update the ip adresses if your local ip changed.
 
 ## Theme installation
 
-Install Zen using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
+Install IMAGAGC using Composer from your WordPress themes directory (replace `your-theme-name` below with the name of your theme):
 
 ```shell
 # initialize the theme
-$ composer create-project nicbeltramelli/zen your-theme-name
+$ composer create-project imaga/imagagc your-theme-name
 
 # install dependencies
 $ yarn
