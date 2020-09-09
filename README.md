@@ -1,7 +1,12 @@
 # IMAGAGC theme
 
-IMAGAGC is a child theme for the Genesis Framework with a modern development workflow. The name IMAGAGC stands for IMAGA Genesis Child.It's based and forked from Zen [Live Demo - Zen](https://beltramelli.app/zen/).
-This starter them from beltramelli is used as a base to build upon. All credits and big kudos to beltramelli. Check the original repo [zen](https://github.com/NicBeltramelli/zen) out.
+IMAGAGC is a child theme for the Genesis Framework with a modern development workflow. The name IMAGAGC is a short for IMAGA Genesis Child (theme).
+
+It's based and forked from Zen [Live Demo - Zen](https://beltramelli.app/zen/).
+
+This starter them from beltramelli is used as a starter base to build upon.
+All credits and big kudos to [beltramelli](https://twitter.com/NicBeltramelli).
+Check the original repositorie @ [Zen](https://github.com/NicBeltramelli/zen).
 
 Tested up to WordPress 5.5.1 and Genesis 3.3.0.
 
@@ -13,7 +18,9 @@ Tested up to WordPress 5.5.1 and Genesis 3.3.0.
 * Autoprefixer to make your CSS work with needed vendor prefixes
 * Minify and bundle code with [Webpack](https://webpack.github.io/)
 * Split large files and enqueue the generated parts
-* Synch browser testing with [Browsersync](http://www.browsersync.io/)
+* Sync browser testing with [Browsersync](http://www.browsersync.io/)
+* Automated accessibility tests with [pa11y](https://pa11y.org/) (coming soon)
+* Automated frontend testing [BackstopJS](https://github.com/garris/BackstopJS) (coming soon)
 
 ## Requirements
 
@@ -30,7 +37,7 @@ Make sure all dependencies have been installed before moving on:
 
 Using this setup with Local by Flywheel and WSL2.
 
-* [flywheel](https://localwp.com/) >= Latest version
+* [Local by Flywheel](https://localwp.com/) >= Latest version
 * [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) >= Latest version
 
 ### Setup Local by flywheel [flywheel](https://localwp.com/) with WSL2 [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
@@ -78,7 +85,7 @@ Go to the Directory where [Local by Flywheel](https://localwp.com/) is installed
 C:\Users\$username\AppData\Roaming\Local\run\router\nginx\conf
 ```
 
-Don't forget to change the Disk drive letter where [Local by Flywheel](https://localwp.com/) is installed (default on C:\)and the username `$username` to your actual username.
+Don't forget to change the `disk drive letter` where [Local by Flywheel](https://localwp.com/) is installed (`default on C:\` )and your windows username `$username` to your actual username.
 
 ## GUI
 
