@@ -1,6 +1,6 @@
 # IMAGAGC Changelog
 
-## [4.2] - 2020-08-09
+## v4.2 - 2020-08-09
 
 * Improve code to comply with our codestandard (code standard)
 * Add pa11y automatic accessibility check
@@ -10,29 +10,29 @@
 * Updated dependancies for composer.json and package.json
 * Updated README.md with explanation to run on WSL2 with a Local by flywheel setup
 
-## [4.1.3] - 2020-05-07
+## v4.1.3 - 2020-05-07
 
 * Improve style
 
-## [4.1.2] - 2020-05-07
+## v4.1.2 - 2020-05-07
 
 * Improve style
 * Improve docs
 * Improve empty page style
 
-## [4.1.1] - 2020-04-28
+## v4.1.1 - 2020-04-28
 
 * Improve WooCommerce style
 * Remove site container animation
 
-## [4.1] - 2020-03-31
+## v4.1 - 2020-03-31
 
 * Add onboarding configuration
 * Remove author box from single posts
 * Improve blockquotes and pullquotes style
 * Update color palette
 
-## [4.0] - 2020-03-25
+## v4.0 - 2020-03-25
 
 * Add Travis CI
 * Add translation support
@@ -59,7 +59,7 @@
 * Remove editor font sizes support
 * Move to wpack.io
 
-## [3.6.0] - 2019-11-11
+## v3.6.0 - 2019-11-11
 
 * Set full-width-content default layout
 * Add anchor navigation powered by jquery.scrollTo
@@ -84,7 +84,7 @@
 * Improve front page template
 * Improve style
 
-## [3.5.1] - 2019-09-03
+## v3.5.1 - 2019-09-03
 
 * Improve gravityforms style
 * Improve helper classes style
@@ -92,7 +92,7 @@
 * Improve blocks columns style
 * Update flexbox helper classes
 
-## [3.5.0] - 2019-08-29
+## v3.5.0 - 2019-08-29
 
 * Improve style
 * Adds blocks body classes
@@ -111,7 +111,7 @@
 * Add Ionicons icons
 * Remove genesis author box
 
-## [3.4.0] - 2019-08-18
+## v3.4.0 - 2019-08-18
 
 * Add version number to zip package
 * Prevent saving a logo with width lower than 100
@@ -135,7 +135,7 @@
 * Improve style
 * Output link color inline css on gutenberg blocks editor
 
-## [3.3.0] - 2019-06-30
+## v3.3.0 - 2019-06-30
 
 * Improve style
 * Add support for gutenbeg blocks
@@ -151,13 +151,13 @@
 * Add codacy grade badge
 * Improve code quality
 
-## [3.2.2] - 2019-03-31
+## v3.2.2 - 2019-03-31
 
 * Improve code quality
 * Add version and priority to functions loading assets
 * Update composer deps
 
-## [3.2.1] - 2019-03-24
+## v3.2.1 - 2019-03-24
 
 * Update docs
 * Update theme info
@@ -168,7 +168,7 @@
 * Add shields
 * Update composer package name
 
-## [3.2.0] - 2019-03-22
+## v3.2.0 - 2019-03-22
 
 * Fix composer package name
 * Add Travis CI
@@ -187,7 +187,7 @@
 * Improve woocommerce style
 * Exclude all dev files from production package
 
-## [3.1.1] - 2019-03-06
+## v3.1.1 - 2019-03-06
 
 * Add clearfix mixin
 * Improve style for widgets
@@ -197,14 +197,14 @@
 * Change number of thumbnails per row on product gallery
 * Improve woocommerce style
 
-## [3.1.0] - 2019-02-04
+## v3.1.0 - 2019-02-04
 
 * Improve global style
 * Update inline styles
 * Add support for Gutenberg editor color palette
 * Improve style for large screen
 
-## [3.0.0] - 2019-01-02
+## v3.0.0 - 2019-01-02
 
 * Add woocommerce styles
 * Rewrite woocommerce logic
@@ -231,7 +231,7 @@
 * Configure composer export script for distribution
 * Rebranding as Genesis Advanced
 
-## [2.6.0] - 2018-03-22
+## v2.6.0 - 2018-03-22
 
 * Fix product gallery bug in WooCommerce 3.0 update
 * Improve compliance with WordPress coding standards
@@ -251,7 +251,7 @@
 * Remove menu toggle border.
 * Remove unnecessary CSS vendor prefixes
 
-## [2.3.0] - 2017-01-30
+## v2.3.0 - 2017-01-30
 
 * Add WooCommerce support to the theme and customizer
 * Add an updated and improved responsive menu script
@@ -259,13 +259,13 @@
 * Update documentation
 * Update code standards
 
-## [2.2.4] - 2016-06-08
+## v2.2.4 - 2016-06-08
 
 * Reorder font size on breadcrumbs
 * Add Changelog
 * Update to normalize.css 4.1.1
 
-## [2.2.3] - 2016-05-18
+## v2.2.3 - 2016-05-18
 
 * Add accessibile mobile menu
 * Add accessibility support for the 404 Page
