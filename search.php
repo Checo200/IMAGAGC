@@ -1,11 +1,11 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the search template.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli  |  IMAGA
+ * @author  NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
  * @link    https://github.com/NicBeltramelli/zen.git
  */
@@ -23,7 +23,7 @@ add_action(
 	function () {
 
 		echo '<div class="archive-description">';
-		echo '<h1 class="archive-title">' . esc_html__( 'Search Results:', 'zen' ) . '</h1>';
+		echo '<h1 class="archive-title">' . esc_html__( 'Search Results:', 'imagagc' ) . '</h1>';
 		echo '</div>';
 	}
 );

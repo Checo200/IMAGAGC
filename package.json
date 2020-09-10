@@ -1,31 +1,48 @@
 {
-  "name": "imagagc",
-  "version": "4.2",
+	"name": "imagagc",
+	"version": "4.1.3",
 	"private": true,
-  "devDependencies": {
-    "@wpackio/entrypoint": "~5.0.0",
-    "@wpackio/scripts": "~5.0.0",
-    "eslint": "~7.8.1",
-    "eslint-loader": "~4.0.2",
-    "eslint-plugin-import": "~2.22.0",
-    "node-sass": "~4.14.1",
-    "stylelint": "~13.7.0",
-    "stylelint-config-wordpress": "~17.0.0",
-    "stylelint-webpack-plugin": "~2.1.0"
-  },
-  "scripts": {
-    "bootstrap": "wpackio-scripts bootstrap",
-    "build": "wpackio-scripts build",
-    "start": "wpackio-scripts start",
-    "archive": "wpackio-scripts pack"
-  },
-  "browserslist": [
-    "defaults"
-  ],
-  "dependencies": {
-    "animate.css": "~4.1.1",
-    "headroom.js": "~0.11.0",
-    "normalize-scss": "~7.0.1",
-    "sass-mq": "~5.0.1"
-  }
+	"devDependencies": {
+		"@wpackio/entrypoint": "~5.0.0",
+		"@wpackio/scripts": "~5.0.0",
+		"backstopjs": "~5.0.6",
+		"eslint": "~7.8.1",
+		"eslint-loader": "~4.0.2",
+		"eslint-plugin-import": "~2.22.0",
+		"node-sass": "~4.14.1",
+		"pa11y": "~5.3.0",
+		"stylelint": "~13.7.0",
+		"stylelint-config-wordpress": "~17.0.0",
+		"stylelint-webpack-plugin": "~2.1.0"
+	},
+	"scripts": {
+		"bootstrap": "wpackio-scripts bootstrap",
+		"build": "wpackio-scripts build",
+		"start": "wpackio-scripts start",
+		"archive": "wpackio-scripts pack",
+		"test:a11y": "node tests/accessibility/compliance/pa11y.js"
+	},
+	"browserslist": [
+		"defaults"
+	],
+	"dependencies": {
+		"animate.css": "~4.1.1",
+		"headroom.js": "~0.11.0",
+		"normalize-scss": "~7.0.1",
+		"sass-mq": "~5.0.1"
+	},
+	"testing": {
+		"urls": {
+			"homepage": "http://imagagc.local",
+			"article": "http://imagagc.local/hello-world",
+			"search-results": "http://imagagc.local/?s=hello",
+			"local": "http://imagagc.local"
+		},
+		"accessibility": {
+			"compliance": "WCAG2AA"
+		}
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	  }
 }

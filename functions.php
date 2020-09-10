@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
- * This file adds the function library to Zen Theme.
+ * This file adds the function library to IMAGAGC Theme.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author  NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link    https://github.com/imaga/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -25,7 +25,7 @@ require_once get_template_directory() . '/lib/init.php'; // Initialize Genesis F
  */
 require_once __DIR__ . '/vendor/autoload.php'; // Require composer autoload for access the WPackio API.
 
-$zen_assets = new \WPackio\Enqueue( 'zen', 'dist', genesis_get_theme_version(), 'theme', false, 'child' ); // Instantiate the WPackio Enqueue class.
+$imagagc_assets = new \WPackio\Enqueue( 'imagagc', 'dist', genesis_get_theme_version(), 'theme', false, 'child' ); // Instantiate the WPackio Enqueue class.
 
 /**
  * The $zen_includes array determines the code library included in your child theme
@@ -33,7 +33,7 @@ $zen_assets = new \WPackio\Enqueue( 'zen', 'dist', genesis_get_theme_version(), 
  * Add or remove files to the array as needed.
  * Please note that missing files will produce a fatal error.
  */
-$zen_includes = [
+$imagagc_includes = [
 
 	/* Theme Setup */
 	'lib/assets.php', // Enqueue assets.
@@ -62,16 +62,16 @@ $zen_includes = [
 
 ];
 
-foreach ( $zen_includes as $zen_file ) {
+foreach ( $zen_includes as $imagagc_file ) {
 
-	if ( ! locate_template( $zen_file, true, true ) ) {
+	if ( ! locate_template( $imagagc_file, true, true ) ) {
 
 		$zen_error(
 			sprintf(
 				/* translators: %s is replaced with the name of missing file */
 				esc_html__(
 					'Error locating %s for inclusion.',
-					'zen'
+					'imagagc'
 				),
 				sprintf(
 					'<code>%s</code>',
@@ -80,9 +80,9 @@ foreach ( $zen_includes as $zen_file ) {
 			),
 			esc_html__(
 				'File not found',
-				'zen'
+				'imagagc'
 			)
 		);
 	}
 }
-unset( $zen_file );
+unset( $imagagc_file );

@@ -3,9 +3,9 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
 	// Project Identity
-	appName: 'zen', // Unique name of your project
+	appName: 'IMAGAGC', // Unique name of your project
 	type: 'theme', // Plugin or theme
-	slug: 'zen', // Plugin or Theme slug, basically the directory name under `wp-content/<themes|plugins>`
+	slug: 'IMAGAGC', // Plugin or Theme slug, basically the directory name under `wp-content/<themes|plugins>`
 	// Used to generate banners on top of compiled stuff
 	bannerConfig: {
 		name: 'IMAGAGC',
