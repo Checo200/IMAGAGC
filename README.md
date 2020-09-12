@@ -2,6 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/811d211a8f564649a073186b250b7c97)](https://app.codacy.com/manual/Checo200/IMAGAGC?utm_source=github.com&utm_medium=referral&utm_content=Checo200/IMAGAGC&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.com/Checo200/IMAGAGC.svg?branch=master)](https://travis-ci.com/Checo200/IMAGAGC)
+[![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6IkNoZWNvMjAwIiwicmVwbzEiOiJJTUFHQUdDIiwiaW5jbHVkZUxpbnQiOmZhbHNlLCJhdXRob3JJZCI6MTI2MjMsImlhdCI6MTU5OTkzMDI2Nn0.s7SwUlNM_uLfHxpXQeXIC9MmZ7wDAPRJ-PaLyUCnEBE)](https://www.deepcode.ai/app/gh/Checo200/IMAGAGC/_/dashboard?utm_content=gh%2FCheco200%2FIMAGAGC)
 
 IMAGAGC is a child theme for the Genesis Framework with a modern development workflow. The name IMAGAGC is a short for IMAGA Genesis Child (theme).
 
@@ -41,7 +42,7 @@ Make sure all dependencies have been installed before moving on:
 - [Local by Flywheel](https://localwp.com/) >= Latest version
 - [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) >= Latest version
 
-## Using Optional configuration - quick setup:
+## Using Optional configuration - quick setup
 
 Create a site with [Local by Flywheel](https://localwp.com/) - Check the [documentation](https://localwp.com/help-docs) for more info and go to the directory where the site is created.
 
@@ -143,12 +144,12 @@ themes/your-theme-name/  # → Root of the child theme
 - [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
 - [sass-mq](https://github.com/sass-mq/sass-mq)
 
-
 ## Quickfix WSL2
-If there are any problems with starting up yarn (`yarn start`), most likely WSL2 <$IP Address> is not properly configured, which will result in network connection errors.
+
+If there are any problems with starting up yarn (`yarn start`), most likely WSL2 <\$IP Address> is not properly configured, which will result in network connection errors.
 To fix this try the following:
 
-#### Find <$IP Address> from Windows 10:
+### Find <\$IP Address> from Windows 10
 
 - **Open command prompt** (cmd): start >> search `cmd`
 - **Use shortcut (keys)**: Windows-key + r >> type in: `cmd`
@@ -157,9 +158,9 @@ To fix this try the following:
 ipconfig /all
 ```
 
-1. Find the <$IP Address> from the Adapter: LAN (Local Area Network). Write down or Copy the <$IP Address and $IP6 Address> and continue to step 2.
+1. Find the <$IP Address> from the Adapter: LAN (Local Area Network). Write down or Copy the <$IP Address and \$IP6 Address> and continue to step 2.
 
-2. Update the WSL2 host file. 
+2. Update the WSL2 host file.
 
 **In WSL 2 use the following commando to open the hostfile from WSL2:**
 
@@ -169,12 +170,13 @@ ipconfig /all
 sudo nano /etc/hosts
 ```
 
-In here, add the name that was generated from [Local by Flywheel](https://localwp.com/) example: `some-name.local`. Type behind the some-name.local the <$IP Address> that was copied in the steps before.
+In here, add the name that was generated from [Local by Flywheel](https://localwp.com/) example: `some-name.local`. Type behind the some-name.local the <\$IP Address> that was copied in the steps before.
 
 **Example:**
+
 ```shell
 some-name.local 192.168.0.5
 some-name.local <$IP6 Address>
 ```
 
-**NOTE:** *Make sure to update (change) the <$IP Address> if the Windows 10 hostmachine changed the local <$IP Address> (from Windows 10).*
+**NOTE:** _Make sure to update (change) the <$IP Address> if the Windows 10 hostmachine changed the local <$IP Address> (from Windows 10)._

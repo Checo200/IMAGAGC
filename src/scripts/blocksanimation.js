@@ -66,7 +66,7 @@ studiopress.blockEffects = ( function() {
 	* Uses top and bottom bounds only and ignores left and right position.
 	* @since 1.0.0
 	* @param {object} elem The element to check.
-	* @returns {bool}
+	* @return {bool}
 	*/
 	var isInViewport = function( elem ) {
 		var bounding = elem.getBoundingClientRect();

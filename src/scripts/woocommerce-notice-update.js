@@ -1,4 +1,5 @@
 /* Trigger AJAX request to save state when the WooCommerce notice is dismissed */
+'use strict';
 
 jQuery(document).on( 'click', '.imagagc-woocommerce-notice .notice-dismiss', function() {
 
