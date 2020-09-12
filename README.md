@@ -3,6 +3,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/811d211a8f564649a073186b250b7c97)](https://app.codacy.com/manual/Checo200/IMAGAGC?utm_source=github.com&utm_medium=referral&utm_content=Checo200/IMAGAGC&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.com/Checo200/IMAGAGC.svg?branch=master)](https://travis-ci.com/Checo200/IMAGAGC)
 [![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6IkNoZWNvMjAwIiwicmVwbzEiOiJJTUFHQUdDIiwiaW5jbHVkZUxpbnQiOmZhbHNlLCJhdXRob3JJZCI6MTI2MjMsImlhdCI6MTU5OTkzMDI2Nn0.s7SwUlNM_uLfHxpXQeXIC9MmZ7wDAPRJ-PaLyUCnEBE)](https://www.deepcode.ai/app/gh/Checo200/IMAGAGC/_/dashboard?utm_content=gh%2FCheco200%2FIMAGAGC)
+[![Latest Stable Version](https://poser.pugx.org/imaga/imagagc/v)](//packagist.org/packages/imaga/imagagc)
 
 IMAGAGC is a child theme for the Genesis Framework with a modern development workflow. The name IMAGAGC is a short for IMAGA Genesis Child (theme).
 
@@ -48,7 +49,7 @@ Create a site with [Local by Flywheel](https://localwp.com/) - Check the [docume
 
 The setup with [Local by Flywheel](https://localwp.com/) and [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) should work out of the box
 
-If this is not the case, check out the quick fix down below - [quickfix]\(#Quickfix WSL2).
+If this is not the case, check out the quick fix down below - [quickfix - WSL2](#Quickfix).
 
 ## Theme installation
 
@@ -144,7 +145,7 @@ themes/your-theme-name/  # → Root of the child theme
 -   [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
 -   [sass-mq](https://github.com/sass-mq/sass-mq)
 
-## Quickfix WSL2
+## Quickfix
 
 If there are any problems with starting up yarn (`yarn start`), most likely WSL2 &lt;\\$IP Address> is not properly configured, which will result in network connection errors.
 To fix this try the following:
