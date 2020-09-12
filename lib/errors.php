@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the functions for displaying error messages.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,42 +21,43 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param string $subtitle
  * @param string $title
  */
-$zen_error = function ( $message, $zen_subtitle = '', $title = '' ) {
+$imagagc_error = function ( $message, $imagagc_subtitle = '', $title = '' ) {
 
-	$docs_url = 'https://github.com/NicBeltramelli/zen.git/';
+	$docs_url = 'https://github.com/Checo200/IMAGAGC.git/';
 
-	$title = $title ?: esc_html__(
-		'Zen &rsaquo; Error',
-		'zen'
+	$title = $title ?: esc_html__( 	// phpcs:ignore
+		'IMAGAGC &rsaquo; Error',
+		'imagagc'
 	);
 
 	$footer = sprintf(
 		'<a href="%s">%s</a>',
 		esc_url( $docs_url ),
 		esc_html__(
-			'Zen Documentation',
-			'zen'
+			'imagagc Documentation',
+			'imagagc'
 		)
 	);
 
-	$message = "<h1>{$title}<br><small>{$zen_subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
+	$message = "<h1>{$title}<br><small>{$imagagc_subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
 
-	wp_die( $message ); // WPCS: xss ok.
+	wp_die( tag_escape( $message ) ); // phpcs:ignore Standard.Category.SniffName.ErrorCode.
+
 };
 
 /**
  * Ensure compatible version of PHP is used
  */
-if ( version_compare( '7.1', phpversion(), '>=' ) ) {
+if ( version_compare( '7.3', phpversion(), '>=' ) ) {
 
-	$zen_error(
+	$imagagc_error(
 		esc_html__(
 			'You must be using PHP 7.1 or greater.',
-			'zen'
+			'imagagc'
 		),
 		esc_html__(
 			'Invalid PHP version',
-			'zen'
+			'imagagc'
 		)
 	);
 }
@@ -64,16 +65,16 @@ if ( version_compare( '7.1', phpversion(), '>=' ) ) {
 /**
  * Ensure compatible version of WordPress is used
  */
-if ( version_compare( '5.0', get_bloginfo( 'version' ), '>=' ) ) {
+if ( version_compare( '5.5', get_bloginfo( 'version' ), '>=' ) ) {
 
-	$zen_error(
+	$imagacg_error(
 		esc_html__(
-			'You must be using WordPress 5.0 or greater.',
-			'zen'
+			'You must be using WordPress 5.5 or greater.',
+			'imagagc'
 		),
 		esc_html__(
 			'Invalid WordPress version',
-			'zen'
+			'imagagc'
 		)
 	);
 }
@@ -81,18 +82,18 @@ if ( version_compare( '5.0', get_bloginfo( 'version' ), '>=' ) ) {
 /**
  * Ensure Genesis Framework is installed
  */
-$zen_parent_theme = wp_get_theme( 'genesis' );
+$imagagc_parent_theme = wp_get_theme( 'genesis' );
 
-if ( ! $zen_parent_theme->exists() ) {
+if ( ! $imagacg_parent_theme->exists() ) {
 
-	$zen_error(
+	$imagagc_error(
 		esc_html__(
 			'You must install Genesis Framework.',
-			'zen'
+			'imagagc'
 		),
 		esc_html__(
 			'Missing Genesis Framework',
-			'zen'
+			'imagagc'
 		)
 	);
 }

@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the required helper functions.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param string $color A color in hex format.
  * @return string The hex code for the most contrasting color: dark grey or white.
  */
-function zen_color_contrast( $color ) {
+function imagagc_color_contrast( $color ) {
 
 	$hexcolor = str_replace( '#', '', $color );
 	$red      = hexdec( substr( $hexcolor, 0, 2 ) );
@@ -42,7 +42,7 @@ function zen_color_contrast( $color ) {
  * @param int    $change The amount to reduce or increase brightness by.
  * @return string Hex code for the adjusted color brightness.
  */
-function zen_color_brightness( $color, $change ) {
+function imagagc_color_brightness( $color, $change ) {
 
 	$hexcolor = str_replace( '#', '', $color );
 

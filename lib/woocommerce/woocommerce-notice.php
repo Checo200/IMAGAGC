@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the "Genesis Connect for WooCommerce" notice.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -51,12 +51,12 @@ add_action(
 		}
 
 		// If message dismissed, exit early.
-		if ( get_user_option( 'zen_woocommerce_message_dismissed', get_current_user_id() ) ) {
+		if ( get_user_option( 'imagagc_woocommerce_message_dismissed', get_current_user_id() ) ) {
 
 			return;
 		}
 
-		$notice_html = sprintf( __( 'Please install and activate <a href="https://wordpress.org/plugins/genesis-connect-woocommerce/" target="_blank">Genesis Connect for WooCommerce</a> to <strong>enable WooCommerce support</strong>.', 'zen' ) );
+		$notice_html = sprintf( __( 'Please install and activate <a href="https://wordpress.org/plugins/genesis-connect-woocommerce/" target="_blank">Genesis Connect for WooCommerce</a> to <strong>enable WooCommerce support</strong>.', 'imagagc' ) );
 
 		if ( current_user_can( 'install_plugins' ) ) {
 
@@ -66,39 +66,39 @@ add_action(
 				'<a href="%s">%s</a>',
 				wp_nonce_url(
 					add_query_arg(
-						[
+						array(
 							'action' => 'install-plugin',
 							'plugin' => $plugin_slug,
-						],
+						),
 						$admin_url
 					),
 					'install-plugin_' . $plugin_slug
 				),
 				__(
 					'install and activate Genesis Connect for WooCommerce',
-					'zen'
+					'imagagc'
 				)
 			);
 
 			// phpcs:disable WordPress.WP.I18n.MissingTranslatorsComment
-			$notice_html = sprintf( __( 'Please %1$s to <strong>enable WooCommerce support.</strong>.', 'zen' ), $install_link );
+			$notice_html = sprintf( __( 'Please %1$s to <strong>enable WooCommerce support.</strong>.', 'imagagc' ), $install_link );
 		}
 
-		echo '<div class="notice notice-info is-dismissible zen-woocommerce-notice"><p>' . wp_kses_post( $notice_html ) . '</p></div>';
+		echo '<div class="notice notice-info is-dismissible imagagc-woocommerce-notice"><p>' . wp_kses_post( $notice_html ) . '</p></div>';
 
 	}
 );
 
 add_action(
-	'wp_ajax_zen_dismiss_woocommerce_notice',
-	'zen_dismiss_woocommerce_notice'
+	'wp_ajax_imagagc_dismiss_woocommerce_notice',
+	'imagagc_dismiss_woocommerce_notice'
 );
 
 /**
  * Add option to dismiss Genesis Connect for WooCommerce plugin install prompt
  */
-function zen_dismiss_woocommerce_notice() {
-	update_user_option( get_current_user_id(), 'zen_woocommerce_message_dismissed', 1 );
+function imagagc_dismiss_woocommerce_notice() {
+	update_user_option( get_current_user_id(), 'imagagc_woocommerce_message_dismissed', 1 );
 }
 
 /* Enqueue script to clear the Genesis Connect for WooCommerce plugin install prompt on dismissal */
@@ -107,17 +107,17 @@ add_action(
 	function () {
 
 		/* Access the wpackio global var */
-		global $zen_assets;
+		global $imagagc_assets;
 
 		/* Main styles */
-		$zen_assets->enqueue( 'woocommerce', 'notice', [] );
+		$imagagc_assets->enqueue( 'woocommerce', 'notice', array() );
 
 	}
 );
 
 add_action(
 	'switch_theme',
-	'zen_reset_woocommerce_notice',
+	'imagagc_reset_woocommerce_notice',
 	10,
 	2
 );
@@ -125,20 +125,20 @@ add_action(
 /**
  * Clear the Genesis Connect for WooCommerce plugin install prompt on theme change
  */
-function zen_reset_woocommerce_notice() {
+function imagagc_reset_woocommerce_notice() {
 
 	global $wpdb;
 
 	$args =
-	[
-		'meta_key'   => $wpdb->prefix . 'zen_woocommerce_message_dismissed',
+	array(
+		'meta_key'   => $wpdb->prefix . 'imagagc_woocommerce_message_dismissed',
 		'meta_value' => 1,
-	];
+	);
 
 	$users = get_users( $args );
 
 	foreach ( $users as $user ) {
-		delete_user_option( $user->ID, 'zen_woocommerce_message_dismissed' );
+		delete_user_option( $user->ID, 'imagagc_woocommerce_message_dismissed' );
 	}
 
 }
@@ -158,7 +158,7 @@ add_action(
 			return;
 		}
 
-		zen_reset_woocommerce_notice();
+		imagagc_reset_woocommerce_notice();
 
 	},
 	10,

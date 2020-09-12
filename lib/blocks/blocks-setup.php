@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds support for Gutenberg blocks.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,10 +20,10 @@ add_action(
 	function () {
 
 		/* Access the wpackio global var */
-		global $zen_assets;
+		global $imagagc_assets;
 
 		/* Get CSS handle */
-		$assets      = $zen_assets->getAssets( 'theme', 'blocks', [] );
+		$assets      = $imagagc_assets->getAssets( 'theme', 'blocks', array() );
 		$entry_point = array_pop( $assets['css'] );
 		$css_handle  = $entry_point['handle'];
 
@@ -34,16 +34,16 @@ add_action(
 		wp_enqueue_style(
 			genesis_get_theme_handle() . '-editor-fonts',
 			$appearance['fonts-url'],
-			[],
+			array(),
 			genesis_get_theme_version()
 		);
 
 		/* Blocks styles and scripts */
-		$zen_assets->enqueue( 'theme', 'blocks', [] );
+		$imagagc_assets->enqueue( 'theme', 'blocks', array() );
 
 		/* Output inline css */
-		$color_link   = get_theme_mod( 'zen_link_color', $appearance['default-colors']['link'] );
-		$color_accent = get_theme_mod( 'zen_accent_color', $appearance['default-colors']['accent'] );
+		$color_link   = get_theme_mod( 'imagagc_link_color', $appearance['default-colors']['link'] );
+		$color_accent = get_theme_mod( 'imagagc_accent_color', $appearance['default-colors']['accent'] );
 
 		$css = '';
 
@@ -68,7 +68,7 @@ add_action(
 			}
 			',
 			$color_accent,
-			zen_color_contrast( $color_accent )
+			imagagc_color_contrast( $color_accent )
 		) : '';
 
 		if ( $css ) {
@@ -86,12 +86,12 @@ add_theme_support(
 );
 
 /* Locate the config file */
-$zen_appearance = genesis_get_config( 'appearance' );
+$imagagc_appearance = genesis_get_config( 'appearance' );
 
 /* Add support for editor color palette */
 add_theme_support(
 	'editor-color-palette',
-	$zen_appearance['editor-color-palette']
+	$imagagc_appearance['editor-color-palette']
 );
 
 /* Disable Custom Colors */

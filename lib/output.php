@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAC
  *
  * This file adds the required CSS to the front end.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -24,10 +24,10 @@ add_action(
 	function () {
 
 		/* Access the wpackio global var */
-		global $zen_assets;
+		global $imagagc_assets;
 
 		/* Get CSS handle */
-		$assets      = $zen_assets->getAssets( 'theme', 'main', [] );
+		$assets      = $imagagc_assets->getAssets( 'theme', 'main', array() );
 		$entry_point = array_pop( $assets['css'] );
 		$css_handle  = $entry_point['handle'];
 
@@ -35,12 +35,12 @@ add_action(
 		$appearance = genesis_get_config( 'appearance' );
 
 		/* Output inline css */
-		$color_link   = get_theme_mod( 'zen_link_color', $appearance['default-colors']['link'] );
-		$color_accent = get_theme_mod( 'zen_accent_color', $appearance['default-colors']['accent'] );
+		$color_link   = get_theme_mod( 'imagagc_link_color', $appearance['default-colors']['link'] );
+		$color_accent = get_theme_mod( 'imagagc_accent_color', $appearance['default-colors']['accent'] );
 		$logo         = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
 		if ( $logo ) {
-			$logo_max_width = get_theme_mod( 'zen_logo_width', 250 );
+			$logo_max_width = get_theme_mod( 'imagagc_logo_width', 250 );
 		}
 
 		$css = '';
@@ -119,7 +119,7 @@ add_action(
 			}
 			',
 			$color_accent,
-			zen_color_contrast( $color_accent )
+			imagagc_color_contrast( $color_accent )
 		) : '';
 
 		/* Output custom logo inline css */

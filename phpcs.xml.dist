@@ -36,7 +36,7 @@
 	</rule>
 
 	<!-- Test PHP cross-version compatibility. -->
-	<config name="testVersion" value="5.4-"/>
+	<config name="testVersion" value="7.3-"/>
 	<rule ref="PHPCompatibility"/>
 
 	<!-- Check for correct text domain on all translatable strings. -->
@@ -49,7 +49,7 @@
 	<!-- Verify that no WP functions are used which are deprecated or removed. -->
 	<rule ref="WordPress.WP.DeprecatedFunctions">
 		<properties>
-			<property name="minimum_supported_version" value="5.0"/>
+			<property name="minimum_supported_version" value="5.5"/>
 		</properties>
 	</rule>
 

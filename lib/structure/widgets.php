@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the widgets settings.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,9 +26,9 @@ unregister_sidebar(
 
 /* Register privacy widget area */
 genesis_register_sidebar(
-	[
+	array(
 		'id'          => 'privacy',
-		'name'        => __( 'Privacy', 'zen' ),
-		'description' => __( 'This area is designed to display the Privacy sidebar menu.', 'zen' ),
-	]
+		'name'        => __( 'Privacy', 'imagagc' ),
+		'description' => __( 'This area is designed to display the Privacy sidebar menu.', 'imagagc' ),
+	)
 );

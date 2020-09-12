@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the content setting.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -78,7 +78,7 @@ add_filter(
 	'genesis_more_text',
 	function () {
 
-		$more_text = genesis_a11y_more_link( __( '[ Read More ]', 'zen' ) );
+		$more_text = genesis_a11y_more_link( __( '[ Read More ]', 'imagagc' ) );
 
 		return $more_text;
 
@@ -90,7 +90,7 @@ add_action(
 	'genesis_before_content',
 	function () {
 
-		if ( ! is_singular( [ 'post', 'page', 'project' ] ) ||
+		if ( ! is_singular( array( 'post', 'page', 'project' ) ) ||
 			! has_post_thumbnail() ) {
 
 			return;

@@ -5,7 +5,7 @@
  * This file adds the function library to IMAGAGC Theme.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli | IMAGA
+ * @author NicBeltramelli | IMAGA | IMAGA
  * @license GPL-2.0-or-later
  * @link    https://github.com/imaga/IMAGAGC.git
  */
@@ -33,7 +33,7 @@ $imagagc_assets = new \WPackio\Enqueue( 'imagagc', 'dist', genesis_get_theme_ver
  * Add or remove files to the array as needed.
  * Please note that missing files will produce a fatal error.
  */
-$imagagc_includes = [
+$imagagc_includes = array(
 
 	/* Theme Setup */
 	'lib/assets.php', // Enqueue assets.
@@ -60,7 +60,7 @@ $imagagc_includes = [
 	'lib/woocommerce/woocommerce-output.php',
 	'lib/woocommerce/woocommerce-notice.php',
 
-];
+);
 
 foreach ( $zen_includes as $imagagc_file ) {
 

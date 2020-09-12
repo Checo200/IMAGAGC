@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * Template Name: Privacy Page
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -21,11 +21,12 @@ add_action(
 	'genesis_sidebar',
 	function() {
 
-		genesis_widget_area( 'privacy',
-			[
+		genesis_widget_area(
+			'privacy',
+			array(
 				'before' => '<div id="privacy" class="privacy" tabindex="-1"><div class="widget-area">',
 				'after'  => '</div></div>',
-			]
+			)
 		);
 	}
 );

@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds body classes to the body tag.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -55,15 +55,15 @@ add_filter(
 			$classes[]      = $template_class;
 		}
 
-		if ( 'fixed-header' === get_theme_mod( 'zen_header_options', false ) ) {
+		if ( 'fixed-header' === get_theme_mod( 'imagagc_header_options', false ) ) {
 			$classes[] = 'has-fixed-header';
 		}
 
-		if ( 'floating-header' === get_theme_mod( 'zen_header_options', false ) ) {
+		if ( 'floating-header' === get_theme_mod( 'imagagc_header_options', false ) ) {
 			$classes[] = 'has-floating-header';
 		}
 
-		if ( is_singular( [ 'post', 'page' ] ) &&
+		if ( is_singular( array( 'post', 'page' ) ) &&
 			has_post_thumbnail() ) {
 			$classes[] = 'has-featured-image';
 		}

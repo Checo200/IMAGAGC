@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * Homepage content optionally installed after theme activation.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -15,21 +15,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Photo by Dave on Unsplash https://unsplash.com/photos/UHFQPFt5-WA/.
-$zen_homepage_top = CHILD_URL . '/config/import/images/dave-UHFQPFt5-WA-unsplash.jpg';
+$imagagc_homepage_top = CHILD_URL . '/config/import/images/dave-UHFQPFt5-WA-unsplash.jpg';
 
 // Photo by Ilona Panych on Unsplash https://unsplash.com/photos/LWuHsMPzoss/.
-$zen_misa = CHILD_URL . '/config/import/images/ilona-panych-LWuHsMPzoss-unsplash.jpg';
+$imagagc_misa = CHILD_URL . '/config/import/images/ilona-panych-LWuHsMPzoss-unsplash.jpg';
 
 // Photo by Tomas Robertson on Unsplash https://unsplash.com/photos/aK3PJYa9XXM/.
-$zen_landing = CHILD_URL . '/config/import/images/tomas-robertson-aK3PJYa9XXM-unsplash.jpg';
+$imagagc_landing = CHILD_URL . '/config/import/images/tomas-robertson-aK3PJYa9XXM-unsplash.jpg';
 
 // Photo by WooCommerce https://woocommerce.com/.
-$zen_woo = CHILD_URL . '/config/import/images/woocommerce-demo.jpg';
+$imagagc_woo = CHILD_URL . '/config/import/images/woocommerce-demo.jpg';
 
 return <<<CONTENT
-<!-- wp:cover {"url":"$zen_homepage_top","id":99,"align":"full","className":"has-background-dim-NaN has-full-height"} -->
-<div class="wp-block-cover alignfull has-background-dim has-background-dim-NaN has-full-height" style="background-image:url($zen_homepage_top)"><div class="wp-block-cover__inner-container"><!-- wp:heading {"align":"center","level":1,"textColor":"white"} -->
-<h1 class="has-white-color has-text-color has-text-align-center">I'm Zen</h1>
+<!-- wp:cover {"url":"$imagagc_homepage_top","id":99,"align":"full","className":"has-background-dim-NaN has-full-height"} -->
+<div class="wp-block-cover alignfull has-background-dim has-background-dim-NaN has-full-height" style="background-image:url($imagagc_homepage_top)"><div class="wp-block-cover__inner-container"><!-- wp:heading {"align":"center","level":1,"textColor":"white"} -->
+<h1 class="has-white-color has-text-color has-text-align-center">I'm imagagc</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","textColor":"white","fontSize":"medium","className":"content-wrap"} -->
@@ -96,7 +96,7 @@ return <<<CONTENT
 <!-- /wp:separator -->
 
 <!-- wp:media-text {"mediaPosition":"right","mediaId":9,"mediaType":"image","isStackedOnMobile":true,"verticalAlignment":"center"} -->
-<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-vertically-aligned-center"><figure class="wp-block-media-text__media"><img src="$zen_misa" alt="" class="wp-image-9"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"align":"center"} -->
+<div class="wp-block-media-text alignwide has-media-on-the-right is-stacked-on-mobile is-vertically-aligned-center"><figure class="wp-block-media-text__media"><img src="$imagagc_misa" alt="" class="wp-image-9"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"align":"center"} -->
 <h2 class="has-text-align-center">Tell your story.</h2>
 <!-- /wp:heading -->
 
@@ -110,7 +110,7 @@ return <<<CONTENT
 <!-- /wp:media-text -->
 
 <!-- wp:media-text {"mediaId":43,"mediaType":"image","isStackedOnMobile":true,"verticalAlignment":"center"} -->
-<div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-center"><figure class="wp-block-media-text__media"><img src="$zen_woo" alt="" class="wp-image-43"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"align":"center"} -->
+<div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-center"><figure class="wp-block-media-text__media"><img src="$imagagc_woo" alt="" class="wp-image-43"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"align":"center"} -->
 <h2 class="has-text-align-center">Sell everything.</h2>
 <!-- /wp:heading -->
 
@@ -127,8 +127,8 @@ return <<<CONTENT
 <hr class="wp-block-separator is-style-empty"/>
 <!-- /wp:separator -->
 
-<!-- wp:cover {"url":"$zen_landing","id":100,"hasParallax":true,"align":"full","className":"has-padding-divider-l"} -->
-<div class="wp-block-cover alignfull has-background-dim has-parallax has-padding-divider-l" style="background-image:url($zen_landing)"><div class="wp-block-cover__inner-container"><!-- wp:heading {"align":"center","textColor":"white","className":"content-wrap"} -->
+<!-- wp:cover {"url":"$imagagc_landing","id":100,"hasParallax":true,"align":"full","className":"has-padding-divider-l"} -->
+<div class="wp-block-cover alignfull has-background-dim has-parallax has-padding-divider-l" style="background-image:url($imagagc_landing)"><div class="wp-block-cover__inner-container"><!-- wp:heading {"align":"center","textColor":"white","className":"content-wrap"} -->
 <h2 class="has-white-color has-text-color has-text-align-center content-wrap">Engage your audience.</h2>
 <!-- /wp:heading -->
 

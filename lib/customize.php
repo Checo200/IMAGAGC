@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the Customizer additions.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,102 +28,102 @@ add_action(
 
 		/* Link color addition */
 		$wp_customize->add_setting(
-			'zen_link_color',
-			[
+			'imagagc_link_color',
+			array(
 				'default'           => $appearance['default-colors']['link'],
 				'sanitize_callback' => 'sanitize_hex_color',
-			]
+			)
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
-				'zen_link_color',
-				[
-					'description' => __( 'Change the default color of post info links, the hover color of linked titles and menu items, and more.', 'zen' ),
-					'label'       => __( 'Link Color', 'zen' ),
+				'imagagc_link_color',
+				array(
+					'description' => __( 'Change the default color of post info links, the hover color of linked titles and menu items, and more.', 'imagagc' ),
+					'label'       => __( 'Link Color', 'imagagc' ),
 					'section'     => 'colors',
-					'settings'    => 'zen_link_color',
-				]
+					'settings'    => 'imagagc_link_color',
+				)
 			)
 		);
 
 		/* Accent color addition */
 		$wp_customize->add_setting(
-			'zen_accent_color',
-			[
+			'imagagc_accent_color',
+			array(
 				'default'           => $appearance['default-colors']['accent'],
 				'sanitize_callback' => 'sanitize_hex_color',
-			]
+			)
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Color_Control(
 				$wp_customize,
-				'zen_accent_color',
-				[
-					'description' => __( 'Change the default hovers color for buttons.', 'zen' ),
-					'label'       => __( 'Accent Color', 'zen' ),
+				'imagagc_accent_color',
+				array(
+					'description' => __( 'Change the default hovers color for buttons.', 'imagagc' ),
+					'label'       => __( 'Accent Color', 'imagagc' ),
 					'section'     => 'colors',
-					'settings'    => 'zen_accent_color',
-				]
+					'settings'    => 'imagagc_accent_color',
+				)
 			)
 		);
 
 		/* Logo width addition */
 		$wp_customize->add_setting(
-			'zen_logo_width',
-			[
+			'imagagc_logo_width',
+			array(
 				'default'           => 250,
 				'sanitize_callback' => 'absint',
-				'validate_callback' => 'zen_validate_logo_width',
-			]
+				'validate_callback' => 'imagagc_validate_logo_width',
+			)
 		);
 
 		$wp_customize->add_control(
-			'zen_logo_width',
-			[
-				'label'       => __( 'Logo Width', 'zen' ),
-				'description' => __( 'The maximum width of the logo in pixels.', 'zen' ),
+			'imagagc_logo_width',
+			array(
+				'label'       => __( 'Logo Width', 'imagagc' ),
+				'description' => __( 'The maximum width of the logo in pixels.', 'imagagc' ),
 				'priority'    => 9,
 				'section'     => 'title_tagline',
-				'settings'    => 'zen_logo_width',
+				'settings'    => 'imagagc_logo_width',
 				'type'        => 'number',
 				'input_attrs' =>
-				[
+				array(
 					'min' => 100,
-				],
+				),
 
-			]
+			)
 		);
 
 		/* Header options addition */
 		$wp_customize->add_setting(
-			'zen_header_options',
-			[
+			'imagagc_header_options',
+			array(
 				'capability' => 'edit_theme_options',
 				'default'    => 'normal',
 				'transport'  => 'refresh',
-			]
+			)
 		);
 
 		$wp_customize->add_control(
 			new WP_Customize_Control(
 				$wp_customize,
-				'zen_header_options',
-				[
+				'imagagc_header_options',
+				array(
 
-					'label'    => __( 'Header Options', 'zen' ),
-					'settings' => 'zen_header_options',
+					'label'    => __( 'Header Options', 'imagagc' ),
+					'settings' => 'imagagc_header_options',
 					'section'  => 'genesis_layout',
 					'type'     => 'radio',
 					'choices'  =>
-					[
-						'normal'          => __( 'Normal', 'zen' ),
-						'fixed-header'    => __( 'Fixed', 'zen' ),
-						'floating-header' => __( 'Floating (active from tablet)', 'zen' ),
-					],
-				]
+					array(
+						'normal'          => __( 'Normal', 'imagagc' ),
+						'fixed-header'    => __( 'Fixed', 'imagagc' ),
+						'floating-header' => __( 'Floating (active from tablet)', 'imagagc' ),
+					),
+				)
 			)
 		);
 	}
@@ -136,12 +136,12 @@ add_action(
  * @param int    $width The width entered by the user.
  * @return int The new width.
  */
-function zen_validate_logo_width( $validity, $width ) {
+function imagagc_validate_logo_width( $validity, $width ) {
 
 	if ( empty( $width ) || ! is_numeric( $width ) ) {
-		$validity->add( 'required', __( 'You must supply a valid number.', 'zen' ) );
+		$validity->add( 'required', __( 'You must supply a valid number.', 'imagagc' ) );
 	} elseif ( $width < 100 ) {
-		$validity->add( 'logo_too_small', __( 'The logo width cannot be less than 100.', 'zen' ) );
+		$validity->add( 'logo_too_small', __( 'The logo width cannot be less than 100.', 'imagagc' ) );
 	}
 
 	return $validity;

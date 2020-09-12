@@ -1,117 +1,117 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the appearance settings.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-$zen_default_colors = [
+$imagagc_default_colors = array(
 	'link'   => '#72b8d0',
 	'accent' => '#74ade8',
-];
-
-$zen_link_color = get_theme_mod(
-	'zen_link_color',
-	$zen_default_colors['link']
 );
 
-$zen_accent_color = get_theme_mod(
-	'zen_accent_color',
-	$zen_default_colors['accent']
+$imagagc_link_color = get_theme_mod(
+	'imagagc_link_color',
+	$imagagc_default_colors['link']
 );
 
-return [
+$imagagc_accent_color = get_theme_mod(
+	'imagagc_accent_color',
+	$imagagc_default_colors['accent']
+);
+
+return array(
 	'fonts-url'            => 'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap',
 	'ionicons'             => 'https://unpkg.com/ionicons@5.0.0/dist/ionicons.js',
 	'content-width'        => 1800,
-	'link-color'           => $zen_link_color,
-	'default-colors'       => $zen_default_colors,
-	'editor-color-palette' => [
-		[
-			'name'  => __( 'Accent', 'zen' ),
+	'link-color'           => $imagagc_link_color,
+	'default-colors'       => $imagagc_default_colors,
+	'editor-color-palette' => array(
+		array(
+			'name'  => __( 'Accent', 'imagagc' ),
 			'slug'  => 'accent',
-			'color' => $zen_accent_color,
-		],
-		[
-			'name'  => __( 'White', 'zen' ),
+			'color' => $imagagc_accent_color,
+		),
+		array(
+			'name'  => __( 'White', 'imagagc' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
-		],
-		[
-			'name'  => __( 'Light', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Light', 'imagagc' ),
 			'slug'  => 'light',
 			'color' => '#f4f4f4',
-		],
-		[
-			'name'  => __( 'Grey', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Grey', 'imagagc' ),
 			'slug'  => 'grey',
 			'color' => '#cecece',
-		],
-		[
-			'name'  => __( 'Dark', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Dark', 'imagagc' ),
 			'slug'  => 'dark',
 			'color' => '#28353D',
-		],
-		[
-			'name'  => __( 'Black', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Black', 'imagagc' ),
 			'slug'  => 'black',
 			'color' => '#1b1b1b',
-		],
-		[
-			'name'  => __( 'Info', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Info', 'imagagc' ),
 			'slug'  => 'info',
 			'color' => '#0073e5',
-		],
-		[
-			'name'  => __( 'Danger', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Danger', 'imagagc' ),
 			'slug'  => 'danger',
 			'color' => '#ed254e',
-		],
-		[
-			'name'  => __( 'Success', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Success', 'imagagc' ),
 			'slug'  => 'success',
 			'color' => '#00a37f',
-		],
-		[
-			'name'  => __( 'Warning', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Warning', 'imagagc' ),
 			'slug'  => 'warning',
 			'color' => '#7c6249',
-		],
-		[
-			'name'  => __( 'Star', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Star', 'imagagc' ),
 			'slug'  => 'star',
 			'color' => '#f2ff49',
-		],
-		// Brand colors
-		[
-			'name'  => __( 'Brand Color Green', 'zen' ),
+		),
+		// Brand colors.
+		array(
+			'name'  => __( 'Brand Color Green', 'imagagc' ),
 			'slug'  => 'brand-color-green',
 			'color' => ' #9fc760',
-		],
-		[
-			'name'  => __( 'Brand Color Red', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Brand Color Red', 'imagagc' ),
 			'slug'  => 'brand-color-red',
 			'color' => '#ef5160',
-		],
-		[
-			'name'  => __( 'Brand Color Orange', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Brand Color Orange', 'imagagc' ),
 			'slug'  => 'brand-color-orange',
 			'color' => '#f79158',
-		],
-		[
-			'name'  => __( 'Brand Color Blue', 'zen' ),
+		),
+		array(
+			'name'  => __( 'Brand Color Blue', 'imagagc' ),
 			'slug'  => 'brand-color-blue',
 			'color' => '#72b8d0',
-		],
+		),
 
-	],
-];
+	),
+);

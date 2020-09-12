@@ -5,9 +5,9 @@
  * This file adds the search template.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli | IMAGA
+ * @author NicBeltramelli | IMAGA | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link    https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

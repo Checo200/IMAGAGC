@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the WooCommerce setup functions.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -63,10 +63,10 @@ add_action(
 		}
 
 		/* Access the wpackio global var */
-		global $zen_assets;
+		global $imagagc_assets;
 
 		/* Main styles */
-		$zen_assets->enqueue( 'woocommerce', 'main', [] );
+		$imagagc_assets->enqueue( 'woocommerce', 'main', array() );
 	},
 	99
 );
@@ -97,13 +97,13 @@ add_filter(
 
 		$current = genesis_site_layout( false );
 		$layouts =
-		[
+		array(
 			'one-sidebar' =>
-			[
+			array(
 				'content-sidebar',
 				'sidebar-content',
-			],
-		];
+			),
+		);
 
 		if ( in_array( $current, $layouts['one-sidebar'], true ) ) {
 
@@ -140,8 +140,8 @@ add_filter(
 	'woocommerce_pagination_args',
 	function ( $args ) {
 
-		$args['prev_text'] = sprintf( '&laquo; %s', __( 'Previous Page', 'zen' ) );
-		$args['next_text'] = sprintf( '%s &raquo;', __( 'Next Page', 'zen' ) );
+		$args['prev_text'] = sprintf( '&laquo; %s', __( 'Previous Page', 'imagagc' ) );
+		$args['next_text'] = sprintf( '%s &raquo;', __( 'Next Page', 'imagagc' ) );
 
 		return $args;
 
@@ -160,7 +160,7 @@ add_action(
 			return;
 		}
 
-		zen_update_woocommerce_image_dimensions();
+		imagagc_update_woocommerce_image_dimensions();
 
 	},
 	1
@@ -180,7 +180,7 @@ add_action(
 			return;
 		}
 
-		zen_update_woocommerce_image_dimensions();
+		imagagc_update_woocommerce_image_dimensions();
 
 	},
 	10,
@@ -190,7 +190,7 @@ add_action(
 /**
  * Update WooCommerce image dimensions
  */
-function zen_update_woocommerce_image_dimensions() {
+function imagagc_update_woocommerce_image_dimensions() {
 
 	/* Update image size options */
 	update_option( 'woocommerce_single_image_width', 655 );    // Single product image.
@@ -212,11 +212,11 @@ add_filter(
 	function ( $size ) {
 
 		$size =
-		[
+		array(
 			'width'  => 180,
 			'height' => 180,
 			'crop'   => 1,
-		];
+		);
 
 		return $size;
 

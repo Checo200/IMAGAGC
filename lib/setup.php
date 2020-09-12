@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file sets localization, defines constants and features.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -50,12 +50,12 @@ add_action(
 /**
  * Set the maximum allowed width for any embedded content
  */
-function zen_content_width() {
+function imagagc_content_width() {
 
 	/* Locate the config file */
 	$appearance = genesis_get_config( 'appearance' );
 
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/924
-	$GLOBALS['content_width'] = apply_filters( 'zen_content_width', $appearance['content-width'] );
+	$GLOBALS['content_width'] = apply_filters( 'imagagc_content_width', $appearance['content-width'] );
 
 }

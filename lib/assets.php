@@ -1,13 +1,13 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file enqueues assets.
  *
  * @package IMAGAGC
- * @author  NicBeltramelli
+ * @author NicBeltramelli | IMAGA
  * @license GPL-2.0-or-later
- * @link    https://github.com/NicBeltramelli/zen.git
+ * @link  https://github.com/Checo200/IMAGAGC.git
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,7 +20,7 @@ add_action(
 	function () {
 
 		/* Access the wpackio global var */
-		global $zen_assets;
+		global $imagagc_assets;
 
 		/* Locate the config file */
 		$appearance = genesis_get_config( 'appearance' );
@@ -29,7 +29,7 @@ add_action(
 		wp_enqueue_style(
 			genesis_get_theme_handle() . '-fonts',
 			$appearance['fonts-url'],
-			[],
+			array(),
 			genesis_get_theme_version()
 		);
 
@@ -37,7 +37,7 @@ add_action(
 		wp_enqueue_script(
 			genesis_get_theme_handle() . '-ionicons',
 			$appearance['ionicons'],
-			[],
+			array(),
 			genesis_get_theme_version(),
 			true
 		);
@@ -48,30 +48,30 @@ add_action(
 		);
 
 		/* Theme styles and scripts */
-		$zen_assets->enqueue(
+		$imagagc_assets->enqueue(
 			'theme',
 			'main',
-			[]
+			array()
 		);
 
 		/* Blocks animation */
-		$zen_assets->enqueue(
+		$imagagc_assets->enqueue(
 			'theme',
 			'blocksanimation',
-			[
+			array(
 				'css' => false,
-			]
+			)
 		);
 
 		/* Floating header scripts */
-		if ( 'floating-header' === get_theme_mod( 'zen_header_options', false ) ) {
+		if ( 'floating-header' === get_theme_mod( 'imagagc_header_options', false ) ) {
 
-			$zen_assets->enqueue(
+			$imagagc_assets->enqueue(
 				'theme',
 				'floatingHeader',
-				[
+				array(
 					'css' => false,
-				]
+				)
 			);
 
 		}
