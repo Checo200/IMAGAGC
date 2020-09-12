@@ -32,7 +32,7 @@ return array(
 		'image_alignment'           => 'aligncenter',
 		'posts_nav'                 => 'numeric',
 		'site_layout'               => 'full-width-content',
-		'footer_text'               => 'Zen Theme',
+		'footer_text'               => 'IMAGAGC Theme',
 	),
 	'posts_per_page'       => 6,
 );

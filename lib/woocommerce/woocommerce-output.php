@@ -1,6 +1,6 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the WooCommerce inline styles.
  *
@@ -39,18 +39,18 @@ add_action(
 		}
 
 		/* Access the wpackio global var */
-		global $zen_assets;
+		global $imagagc_assets;
 
 		/* Get CSS handle */
-		$assets      = $zen_assets->getAssets( 'woocommerce', 'main', [] );
+		$assets      = $imagagc_assets->getAssets( 'woocommerce', 'main', [] );
 		$entry_point = array_pop( $assets['css'] );
 		$css_handle  = $entry_point['handle'];
 
 		/* Locate the config file */
 		$appearance = genesis_get_config( 'appearance' );
 
-		$color_link   = get_theme_mod( 'zen_link_color', $appearance['default-colors']['link'] );
-		$color_accent = get_theme_mod( 'zen_accent_color', $appearance['default-colors']['accent'] );
+		$color_link   = get_theme_mod( 'imagagc_link_color', $appearance['default-colors']['link'] );
+		$color_accent = get_theme_mod( 'imagagc_accent_color', $appearance['default-colors']['accent'] );
 
 		$woo_css = '';
 
@@ -109,7 +109,7 @@ add_action(
 			}
 			',
 			$color_accent,
-			zen_color_contrast( $color_accent )
+			imagagc_color_contrast( $color_accent )
 		) : '';
 
 		if ( $woo_css ) {

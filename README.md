@@ -14,33 +14,33 @@ Tested up to WordPress 5.5.1 and Genesis 3.3.0.
 
 ## Features
 
-* Consume packages from npm registry
-* Modern JavaScript
-* SASS/SCSS for stylesheets
-* Autoprefixer to make your CSS work with needed vendor prefixes
-* Minify and bundle code with [Webpack](https://webpack.github.io/)
-* Split large files and enqueue the generated parts
-* Sync browser testing with [Browsersync](http://www.browsersync.io/)
-* Automated accessibility tests with [pa11y](https://pa11y.org/) (coming soon)
-* Automated frontend testing [BackstopJS](https://github.com/garris/BackstopJS) (coming soon)
+- Consume packages from npm registry
+- Modern JavaScript
+- SASS/SCSS for stylesheets
+- Autoprefixer to make your CSS work with needed vendor prefixes
+- Minify and bundle code with [Webpack](https://webpack.github.io/)
+- Split large files and enqueue the generated parts
+- Sync browser testing with [Browsersync](http://www.browsersync.io/)
+- Automated accessibility tests with [pa11y](https://pa11y.org/) (coming soon)
+- Automated frontend testing [BackstopJS](https://github.com/garris/BackstopJS) (coming soon)
 
 ## Requirements
 
 Make sure all dependencies have been installed before moving on:
 
-* [WordPress](https://wordpress.org/) >= 5.5
-* [Genesis Framework](https://my.studiopress.com/themes/genesis/) >= 3.3.0
-* [PHP](https://secure.php.net/manual/en/install.php) >= 7.3
-* [Composer](https://getcomposer.org/download/)
-* [Node.js](http://nodejs.org/) >= 14.0.0
-* [Yarn](https://yarnpkg.com/en/docs/install) >= 1.22.5
+- [WordPress](https://wordpress.org/) >= 5.5
+- [Genesis Framework](https://my.studiopress.com/themes/genesis/) >= 3.3.0
+- [PHP](https://secure.php.net/manual/en/install.php) >= 7.3
+- [Composer](https://getcomposer.org/download/)
+- [Node.js](http://nodejs.org/) >= 14.0.0
+- [Yarn](https://yarnpkg.com/en/docs/install) >= 1.22.5
 
 ## Extra
 
 Using this setup with Local by Flywheel and WSL2.
 
-* [Local by Flywheel](https://localwp.com/) >= Latest version
-* [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) >= Latest version
+- [Local by Flywheel](https://localwp.com/) >= Latest version
+- [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) >= Latest version
 
 ### Setup Local by flywheel [flywheel](https://localwp.com/) with WSL2 [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index)
 
@@ -81,7 +81,7 @@ Go to the Directory where [Local by Flywheel](https://localwp.com/) is installed
 
 ## Explorer path
 
-*Example explorer path:*
+_Example explorer path:_
 
 ```shell
 C:\Users\$username\AppData\Roaming\Local\run\router\nginx\conf
@@ -179,9 +179,9 @@ $ composer install
 1. Edit `style.css` to define your theme meta information (name, URI, description, version, author)
 2. Edit `wpackio.server.js` that handles the development server:
 
-* `proxy` should reflect your local development URL, e.g. `http://your-address.local`
-* `distPublicPath` should reflect the absolute URL path of your dist folder, e.g. `/wp-content/themes/your-theme-name/dist/`
-**You must add a forward slash at the end otherwise it will not work.**
+- `proxy` should reflect your local development URL, e.g. `http://your-address.local`
+- `distPublicPath` should reflect the absolute URL path of your dist folder, e.g. `/wp-content/themes/your-theme-name/dist/`
+  **You must add a forward slash at the end otherwise it will not work.**
 
 ## Theme development
 
@@ -199,8 +199,8 @@ $ yarn archive
 
 ### WordPress coding standard
 
-* `composer phpcs` — Runs WordPress coding standards checks
-* `composer phpcbf` — Fix php sniff violations automatically
+- `composer phpcs` — Runs WordPress coding standards checks
+- `composer phpcbf` — Fix php sniff violations automatically
 
 ## Theme structure
 
@@ -242,11 +242,11 @@ themes/your-theme-name/  # → Root of your child theme
 
 ## Dev dependencies
 
-* [wpack.io](https://github.com/swashata/wp-webpack-script)
+- [wpack.io](https://github.com/swashata/wp-webpack-script)
 
 ## Front-end dependencies
 
-* [Animate.css](https://github.com/daneden/animate.css)
-* [Headroom.js](https://github.com/WickyNilliams/headroom.js)
-* [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
-* [sass-mq](https://github.com/sass-mq/sass-mq)
+- [Animate.css](https://github.com/daneden/animate.css)
+- [Headroom.js](https://github.com/WickyNilliams/headroom.js)
+- [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
+- [sass-mq](https://github.com/sass-mq/sass-mq)

@@ -67,7 +67,7 @@ if ( version_compare( '7.3', phpversion(), '>=' ) ) {
  */
 if ( version_compare( '5.5', get_bloginfo( 'version' ), '>=' ) ) {
 
-	$imagacg_error(
+	$imagagc_error(
 		esc_html__(
 			'You must be using WordPress 5.5 or greater.',
 			'imagagc'
@@ -84,7 +84,7 @@ if ( version_compare( '5.5', get_bloginfo( 'version' ), '>=' ) ) {
  */
 $imagagc_parent_theme = wp_get_theme( 'genesis' );
 
-if ( ! $imagacg_parent_theme->exists() ) {
+if ( ! $imagagc_parent_theme->exists() ) {
 
 	$imagagc_error(
 		esc_html__(

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Zen\n"
+"Project-Id-Version: IMAGAGC\n"
 "POT-Creation-Date: 2020-03-25 00:21+0100\n"
 "PO-Revision-Date: 2020-03-25 00:21+0100\n"
 "Last-Translator: Nic Beltramelli <nicbeltramelli@gmail.com>\n"
@@ -147,11 +147,11 @@ msgid "The logo width cannot be less than 100."
 msgstr ""
 
 #: lib/errors.php:29
-msgid "Zen &rsaquo; Error"
+msgid "IMAGAGC &rsaquo; Error"
 msgstr ""
 
 #: lib/errors.php:37
-msgid "Zen Documentation"
+msgid "IMAGAGC Documentation"
 msgstr ""
 
 #: lib/errors.php:54
@@ -223,11 +223,11 @@ msgid "Search Results:"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Zen"
+msgid "IMAGAGC"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://github.com/NicBeltramelli/zen"
+msgid "https://github.com/NicBeltramelli/IMAGAGC"
 msgstr ""
 
 #. Description of the plugin/theme

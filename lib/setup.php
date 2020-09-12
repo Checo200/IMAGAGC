@@ -19,7 +19,7 @@ add_action(
 	'after_setup_theme',
 	function () {
 
-		load_child_theme_textdomain( 'zen', get_stylesheet_directory() . '/languages' );
+		load_child_theme_textdomain( 'imagagc', get_stylesheet_directory() . '/languages' );
 
 	}
 );
@@ -43,7 +43,7 @@ add_action(
 
 add_action(
 	'after_setup_theme',
-	'zen_content_width',
+	'imagagc_content_width',
 	0
 );
 

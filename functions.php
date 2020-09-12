@@ -28,7 +28,7 @@ require_once __DIR__ . '/vendor/autoload.php'; // Require composer autoload for 
 $imagagc_assets = new \WPackio\Enqueue( 'imagagc', 'dist', genesis_get_theme_version(), 'theme', false, 'child' ); // Instantiate the WPackio Enqueue class.
 
 /**
- * The $zen_includes array determines the code library included in your child theme
+ * The $imagagc_includes array determines the code library included in your child theme
  *
  * Add or remove files to the array as needed.
  * Please note that missing files will produce a fatal error.
@@ -62,11 +62,11 @@ $imagagc_includes = array(
 
 );
 
-foreach ( $zen_includes as $imagagc_file ) {
+foreach ( $imagagc_includes as $imagagc_file ) {
 
 	if ( ! locate_template( $imagagc_file, true, true ) ) {
 
-		$zen_error(
+		$imagagc_error(
 			sprintf(
 				/* translators: %s is replaced with the name of missing file */
 				esc_html__(
@@ -75,7 +75,7 @@ foreach ( $zen_includes as $imagagc_file ) {
 				),
 				sprintf(
 					'<code>%s</code>',
-					esc_html( $zen_file )
+					esc_html( $imagagc_file )
 				)
 			),
 			esc_html__(

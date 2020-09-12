@@ -1,6 +1,6 @@
 <?php
 /**
- * Zen
+ * IMAGAGC
  *
  * This file adds the front page template.
  *
