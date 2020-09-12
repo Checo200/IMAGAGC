@@ -131,8 +131,8 @@ function imagagc_reset_woocommerce_notice() {
 
 	$args =
 	array(
-		'meta_key'   => $wpdb->prefix . 'imagagc_woocommerce_message_dismissed',
-		'meta_value' => 1,
+		'meta_key'   => $wpdb->prefix . 'imagagc_woocommerce_message_dismissed', //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
+		'meta_value' => 1, //phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 	);
 
 	$users = get_users( $args );

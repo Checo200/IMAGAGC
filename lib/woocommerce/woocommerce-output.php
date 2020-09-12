@@ -42,7 +42,7 @@ add_action(
 		global $imagagc_assets;
 
 		/* Get CSS handle */
-		$assets      = $imagagc_assets->getAssets( 'woocommerce', 'main', [] );
+		$assets      = $imagagc_assets->getAssets( 'woocommerce', 'main', array() );
 		$entry_point = array_pop( $assets['css'] );
 		$css_handle  = $entry_point['handle'];
 
