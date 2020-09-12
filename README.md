@@ -16,31 +16,31 @@ Tested up to WordPress 5.5.1 and Genesis 3.3.0.
 
 ## Features
 
-- Consume packages from npm registry
-- Modern JavaScript
-- SASS/SCSS for stylesheets
-- Autoprefixer to make CSS work with needed vendor prefixes
-- Minify and bundle code with [Webpack](https://webpack.github.io/)
-- Split large files and enqueue the generated parts
-- Sync browser testing with [Browsersync](http://www.browsersync.io/)
-- Automated accessibility tests with [pa11y](https://pa11y.org/) (**coming soon**)
-- Automated frontend testing [BackstopJS](https://github.com/garris/BackstopJS) (**coming soon**)
+-   Consume packages from npm registry
+-   Modern JavaScript
+-   SASS/SCSS for stylesheets
+-   Autoprefixer to make CSS work with needed vendor prefixes
+-   Minify and bundle code with [Webpack](https://webpack.github.io/)
+-   Split large files and enqueue the generated parts
+-   Sync browser testing with [Browsersync](http://www.browsersync.io/)
+-   Automated accessibility tests with [pa11y](https://pa11y.org/) (**coming soon**)
+-   Automated frontend testing [BackstopJS](https://github.com/garris/BackstopJS) (**coming soon**)
 
 ## Requirements
 
 Make sure all dependencies have been installed before moving on:
 
-- [WordPress](https://wordpress.org/) >= 5.5
-- [Genesis Framework](https://my.studiopress.com/themes/genesis/) >= 3.3.0
-- [PHP](https://secure.php.net/manual/en/install.php) >= 7.3
-- [Composer](https://getcomposer.org/download/)
-- [Node.js](http://nodejs.org/) >= 14.0.0
-- [Yarn](https://yarnpkg.com/en/docs/install) >= 1.22.5
+-   [WordPress](https://wordpress.org/) >= 5.5
+-   [Genesis Framework](https://my.studiopress.com/themes/genesis/) >= 3.3.0
+-   [PHP](https://secure.php.net/manual/en/install.php) >= 7.3
+-   [Composer](https://getcomposer.org/download/)
+-   [Node.js](http://nodejs.org/) >= 14.0.0
+-   [Yarn](https://yarnpkg.com/en/docs/install) >= 1.22.5
 
 ## Optional
 
-- [Local by Flywheel](https://localwp.com/) >= Latest version
-- [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) >= Latest version
+-   [Local by Flywheel](https://localwp.com/) >= Latest version
+-   [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) >= Latest version
 
 ## Using Optional configuration - quick setup
 
@@ -48,7 +48,7 @@ Create a site with [Local by Flywheel](https://localwp.com/) - Check the [docume
 
 The setup with [Local by Flywheel](https://localwp.com/) and [WSL2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index) should work out of the box
 
-If this is not the case, check out the quick fix down below - [quickfix](#Quickfix WSL2).
+If this is not the case, check out the quick fix down below - [quickfix]\(#Quickfix WSL2).
 
 ## Theme installation
 
@@ -70,12 +70,12 @@ $ composer install
 
 ## Theme setup
 
-1. Edit `style.css` to define the theme meta information (name, URI, description, version, author)
-2. Edit `wpackio.server.js` that handles the development server:
+1.  Edit `style.css` to define the theme meta information (name, URI, description, version, author)
+2.  Edit `wpackio.server.js` that handles the development server:
 
-- `proxy` should reflect the local development URL, e.g. `http://some-name.local`
-- `distPublicPath` should reflect the absolute URL path of the dist folder, e.g. `/wp-content/themes/your-theme-name/dist/`
-  **Add a forward slash at the end otherwise it will not work.**
+-   `proxy` should reflect the local development URL, e.g. `http://some-name.local`
+-   `distPublicPath` should reflect the absolute URL path of the dist folder, e.g. `/wp-content/themes/your-theme-name/dist/`
+    **Add a forward slash at the end otherwise it will not work.**
 
 ## Theme development
 
@@ -92,8 +92,8 @@ $ yarn archive
 
 ### WordPress coding standard
 
-- `composer phpcs` — Runs WordPress coding standards checks
-- `composer phpcbf` — Fix php sniff violations automatically
+-   `composer phpcs` — Runs WordPress coding standards checks
+-   `composer phpcbf` — Fix php sniff violations automatically
 
 ## Theme structure
 
@@ -135,32 +135,32 @@ themes/your-theme-name/  # → Root of the child theme
 
 ## Dev dependencies
 
-- [wpack.io](https://github.com/swashata/wp-webpack-script)
+-   [wpack.io](https://github.com/swashata/wp-webpack-script)
 
 ## Front-end dependencies
 
-- [Animate.css](https://github.com/daneden/animate.css)
-- [Headroom.js](https://github.com/WickyNilliams/headroom.js)
-- [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
-- [sass-mq](https://github.com/sass-mq/sass-mq)
+-   [Animate.css](https://github.com/daneden/animate.css)
+-   [Headroom.js](https://github.com/WickyNilliams/headroom.js)
+-   [normalize-scss](https://github.com/JohnAlbin/normalize-scss)
+-   [sass-mq](https://github.com/sass-mq/sass-mq)
 
 ## Quickfix WSL2
 
-If there are any problems with starting up yarn (`yarn start`), most likely WSL2 <\$IP Address> is not properly configured, which will result in network connection errors.
+If there are any problems with starting up yarn (`yarn start`), most likely WSL2 &lt;\\$IP Address> is not properly configured, which will result in network connection errors.
 To fix this try the following:
 
-### Find <\$IP Address> from Windows 10
+### Find &lt;\\$IP Address> from Windows 10
 
-- **Open command prompt** (cmd): start >> search `cmd`
-- **Use shortcut (keys)**: Windows-key + r >> type in: `cmd`
+-   **Open command prompt** (cmd): start >> search `cmd`
+-   **Use shortcut (keys)**: Windows-key + r >> type in: `cmd`
 
 ```shell
 ipconfig /all
 ```
 
-1. Find the <$IP Address> from the Adapter: LAN (Local Area Network). Write down or Copy the <$IP Address and \$IP6 Address> and continue to step 2.
+1.  Find the &lt;$IP Address> from the Adapter: LAN (Local Area Network). Write down or Copy the &lt;$IP Address and \\$IP6 Address> and continue to step 2.
 
-2. Update the WSL2 host file.
+2.  Update the WSL2 host file.
 
 **In WSL 2 use the following commando to open the hostfile from WSL2:**
 
@@ -170,7 +170,7 @@ ipconfig /all
 sudo nano /etc/hosts
 ```
 
-In here, add the name that was generated from [Local by Flywheel](https://localwp.com/) example: `some-name.local`. Type behind the some-name.local the <\$IP Address> that was copied in the steps before.
+In here, add the name that was generated from [Local by Flywheel](https://localwp.com/) example: `some-name.local`. Type behind the some-name.local the &lt;\\$IP Address> that was copied in the steps before.
 
 **Example:**
 
@@ -179,4 +179,4 @@ some-name.local 192.168.0.5
 some-name.local <$IP6 Address>
 ```
 
-**NOTE:** _Make sure to update (change) the <$IP Address> if the Windows 10 hostmachine changed the local <$IP Address> (from Windows 10)._
+**NOTE:** _Make sure to update (change) the &lt;$IP Address> if the Windows 10 hostmachine changed the local &lt;$IP Address> (from Windows 10)._

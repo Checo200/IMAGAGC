@@ -77,13 +77,13 @@ is covered only if its contents constitute a work based on the
 Program (independent of having been made by running the Program).
 Whether that is true depends on what the Program does.
 
-1. You may copy and distribute verbatim copies of the Program's
-   source code as you receive it, in any medium, provided that you
-   conspicuously and appropriately publish on each copy an appropriate
-   copyright notice and disclaimer of warranty; keep intact all the
-   notices that refer to this License and to the absence of any warranty;
-   and give any other recipients of the Program a copy of this License
-   along with the Program.
+1.  You may copy and distribute verbatim copies of the Program's
+    source code as you receive it, in any medium, provided that you
+    conspicuously and appropriately publish on each copy an appropriate
+    copyright notice and disclaimer of warranty; keep intact all the
+    notices that refer to this License and to the absence of any warranty;
+    and give any other recipients of the Program a copy of this License
+    along with the Program.
 
 You may charge a fee for the physical act of transferring a copy, and
 you may at your option offer warranty protection in exchange for a fee.
@@ -328,9 +328,9 @@ school, if any, to sign a "copyright disclaimer" for the program, if
 necessary. Here is a sample; alter the names:
 
 Yoyodyne, Inc., hereby disclaims all copyright interest in the program
-`Gnomovision' (which makes passes at compilers) written by James Hacker.
+\`Gnomovision' (which makes passes at compilers) written by James Hacker.
 
-signature of Ty Coon, 1 April 1989
+<signature of Ty Coon>, 1 April 1989
 Ty Coon, President of Vice
 
 This General Public License does not permit incorporating your program into
