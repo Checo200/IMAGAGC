@@ -1,8 +1,8 @@
-<?php
+<?php //phpcs:disable
 /**
  * IMAGAGC
  *
- * Test Frontent Functionality.
+ * Test Frontend Functionality.
  *
  * @package IMAGAGC
  * @author  IMAGA

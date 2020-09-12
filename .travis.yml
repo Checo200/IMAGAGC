@@ -23,7 +23,7 @@ cache:
 
 branches:
   except:
-  - dev
+    - dev
 
 before_install:
   - composer self-update

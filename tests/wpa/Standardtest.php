@@ -1,4 +1,4 @@
-<?php
+<?php //phpcs:disable
 /**
  * Test standard WP functionality
  *

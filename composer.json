@@ -1,25 +1,25 @@
 {
-    "name": "imaga/imagagc",
-    "type": "wordpress-theme",
-    "license": "GPL-2.0-or-later",
-    "description": "Child theme for Genesis Framework with a modern development workflow",
-    "homepage": "https://imagagc.imaga.nl",
-    "authors": [
-        {
-            "name": "IMAGA",
-            "email": "Wordpress@imaga.nl",
-            "homepage": "https://imaga.nl/"
-        }
-    ],
-    "keywords": [
-    "wordpress",
-    "genesis"
-    ],
-    "require": {
-        "php": ">=7.3",
-        "composer/installers": "*",
-        "wpackio/enqueue": "^2.2.0"
-    },
+	"name": "imaga/imagagc",
+	"type": "wordpress-theme",
+	"license": "GPL-2.0-or-later",
+	"description": "Child theme for Genesis Framework with a modern development workflow",
+	"homepage": "https://imagagc.imaga.nl",
+	"authors": [
+		{
+			"name": "IMAGA",
+			"email": "Wordpress@imaga.nl",
+			"homepage": "https://imaga.nl/"
+		}
+	],
+	"keywords": [
+		"wordpress",
+		"genesis"
+	],
+	"require": {
+		"php": ">=7.3",
+		"composer/installers": "*",
+		"wpackio/enqueue": "^2.2.0"
+	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"symplify/coding-standard": "*",
@@ -27,9 +27,8 @@
 		"wp-coding-standards/wpcs": "*",
 		"automattic/vipwpcs": "*"
 	},
-
 	"scripts": {
-        "phpcs": "vendor/bin/phpcs ",
-        "phpcbf": "vendor/bin/phpcbf --report=diff -vv"
-    }
+		"phpcs": "vendor/bin/phpcs ",
+		"phpcbf": "vendor/bin/phpcbf --report=diff -vv"
+	}
 }
