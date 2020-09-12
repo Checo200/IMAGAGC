@@ -18,15 +18,14 @@
     "require": {
         "php": ">=7.3",
         "composer/installers": "*",
-        "wpackio/enqueue": "~2.2.0"
+        "wpackio/enqueue": "^2.2.0"
     },
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"symplify/coding-standard": "*",
 		"phpcompatibility/php-compatibility": "*",
 		"wp-coding-standards/wpcs": "*",
-		"automattic/vipwpcs": "*",
-		"10up/wpacceptance": "dev-master"
+		"automattic/vipwpcs": "*"
 	},
 
 	"scripts": {
