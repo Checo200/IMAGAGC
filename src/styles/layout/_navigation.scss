@@ -1,12 +1,12 @@
 /**
 * Navigation
-*
 *	- Site Navigation
 *	- Responsive Menu
 *	- Secondary Menu
 *	- Header Menus
 *	- Primary Menu
 *	- Secondary Menu
+*	- Top Navigation
 *	- Tertiary Menu
 */
 
@@ -17,12 +17,13 @@
 	width: 100%;
 
 	a {
-		color: color(light, soft);
+		color: color(dark, strong);
 		display: block;
 		outline-offset: -1px;
 		padding-bottom: space(xxs);
 		padding-top: space(xxs);
 		text-decoration: none;
+		text-transform: uppercase;
 
 		@extend %font-size-s;
 	}
@@ -100,7 +101,7 @@
 			}
 
 			.sub-menu-toggle {
-				color: color(light, soft);
+				color: color(dark, base);
 
 				&::before {
 					content: "\f139";
@@ -266,7 +267,7 @@
 }
 
 .menu-toggle {
-	color: color(light, soft);
+	color: color(dark, base);
 	height: auto; // Prevent height of default buttons.
 	padding: space(divider, s);
 	position: absolute;
@@ -293,10 +294,15 @@
 	@include mq($from: tablet) {
 		display: none;
 	}
+
+	@include mq($until: tablet) {
+		visibility: visible;
+		color: color(dark, soft);
+	}
 }
 
 .sub-menu-toggle {
-	color: color(light, soft);
+	color: color(dark, base);
 	float: right;
 	height: auto;
 	min-width: 0;
@@ -310,7 +316,6 @@
 	&::before {
 		content: "\f132";
 		display: inline-block;
-		float: right;
 		height: auto;
 		line-height: line-height(s);
 		text-rendering: auto;
@@ -349,7 +354,7 @@
 
 	&:focus,
 	&:hover {
-		color: color(light, soft);
+		color: color(light, dark);
 		background-color: transparent;
 		box-shadow: none; // Prevent box shadow of default buttons.
 	}
@@ -358,7 +363,8 @@
 /* Header Menu */
 
 .nav-primary,
-.nav-secondary {
+.nav-secondary,
+.nav-topnav {
 	clear: left;
 	float: left;
 	width: 100%;
@@ -414,6 +420,10 @@
 	.wrap {
 		text-align: left;
 
+		@include mq($until: phone) {
+			text-align: center;
+		}
+
 		@include mq($from: tablet) {
 			text-align: right;
 		}
@@ -428,6 +438,69 @@
 	}
 }
 
+/* Top Navigation */
+.topnav-menu-wrapper {
+	background-color: $topnav-background-color;
+	height: space(0.5);
+	position: relative;
+	width: 100%;
+	z-index: 9999;
+
+	.wrap {
+		padding: 0;
+
+		@include mq($from: tablet) {
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			padding: space(column, s);
+
+			// Prevent pseudo-elements from impacting the space-between calculation.
+			&::after,
+			&::before {
+				content: none;
+			}
+		}
+	}
+
+	.nav-topnav {
+		clear: none;
+		float: none;
+		width: 100%;
+
+		.wrap {
+			text-align: left;
+
+			@include mq($from: tablet) {
+				text-align: right;
+			}
+		}
+
+		@include mq($from: tablet) {
+			flex: 1;
+			padding-bottom: 0;
+			padding-top: 0;
+		}
+
+		.genesis-nav-menu {
+
+			.menu-item {
+
+				> a {
+					color: color(dark, strong);
+					display: block;
+					outline-offset: -1px;
+					padding-bottom: space(xxs);
+					padding-top: space(xxs);
+					text-decoration: none;
+					text-transform: none;
+
+					@extend %font-size-s;
+				}
+			}
+		}
+	}
+}
 
 /* Tertiary Menu */
 

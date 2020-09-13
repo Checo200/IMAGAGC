@@ -38,9 +38,9 @@ return array(
 	'genesis-after-entry-widget-area' => '',
 	'genesis-footer-widgets'          => 3,
 	'genesis-menus'                   => array(
-		'primary'    => __( 'Header Right', 'imagagc' ),
-		'secondary'  => __( 'Header Left', 'imagagc' ),
-		'tertiary'   => __( 'Footer', 'imagagc' ),
-		'quaternary' => __( 'Top Navigation', 'imagagc' ),
+		'primary'   => __( 'Header Right', 'imagagc' ),
+		'secondary' => __( 'Header Left', 'imagagc' ),
+		'tertiary'  => __( 'Footer', 'imagagc' ),
+		'topnav'    => __( 'Top Navigation', 'imagagc' ),
 	),
 );

@@ -8,10 +8,9 @@
 /* Site Header */
 
 .site-header {
-	background: color(dark, strong);
+	background: $navigation-background-color;
 	height: space(l);
-	position: absolute;
-	transition: $base-transition;
+	position: relative;
 	width: 100%;
 	z-index: 9999;
 
@@ -67,10 +66,8 @@
 
 	.site-header {
 
-		@extend %gradient-top;
-
 		&.header-not-top {
-			background: color(dark, strong);
+			background: $navigation-background-color;
 		}
 	}
 }
@@ -82,6 +79,15 @@
 	padding: space(left, s);
 	position: absolute;
 	text-align: left;
+
+	@include mq($from: small-phone) {
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
 
 	@include mq($from: tablet) {
 		padding: 0;

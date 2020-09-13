@@ -35,8 +35,8 @@ $mq-media-type: screen;
 /* Font Stacks */
 
 $base-font-sans:	"Roboto", sans-serif !default;
-$base-font-serif:	"Roboto Slab", serif !default;
-$base-font-mono:	"Roboto Mono", monospace !default;
+$base-font-serif:	"Roboto", serif !default;
+$base-font-mono:	"Roboto", monospace !default;
 
 /*
 * Grid Height (based on root font size)
@@ -217,7 +217,6 @@ $base-space: (
 );
 
 /* Colors */
-
 $dark:				#28353d;
 $accent:			#00a37f;
 $info:				#0073e5;
@@ -232,6 +231,15 @@ $brand-color-red:	#ef5160;
 $brand-color-orange:#f79158;
 $brand-color-blue:	#72b8d0;
 
+/* Standard colors */
+$white-color:	    #fff;
+$black-color:       #000;
+
+/* Theme styling colors */
+$navigation-background-color:  		$white-color;
+$footer-background-color:      		$dark;
+$footer-widget-background-color: 	$dark;
+$topnav-background-color:      		$brand-color-blue;
 
 // Variations
 $color-shade-amount: 15%;
@@ -296,7 +304,8 @@ $base-colors: (
 		strong:		darken($warning, $color-shade-amount),
 		trans:		transparentize($warning, $color-trans-amount)
 	),
-	// Brand colors
+
+	// Brand colors - nested values
 	brand-color-green: (
 		base:		$brand-color-green,
 		soft:		lighten($brand-color-green, $color-shade-amount),
@@ -320,6 +329,32 @@ $base-colors: (
 		soft:		lighten($brand-color-blue, $color-shade-amount),
 		strong: 	darken($brand-color-blue, $color-shade-amount),
 		trans: 		transparentize($brand-color-blue, $color-trans-amount)
+	),
+
+	// Theme styling - nested values
+	topnav-background-colorr: (
+		base:		$topnav-background-color,
+		soft:		lighten($topnav-background-color, $color-shade-amount),
+		strong:		darken($topnav-background-color, $color-shade-amount),
+		trans:		transparentize($topnav-background-color, $color-trans-amount)
+	),
+	navigation-background-color: (
+		base:		$navigation-background-color,
+		soft:		lighten($navigation-background-color, $color-shade-amount),
+		strong:		darken($navigation-background-color, $color-shade-amount),
+		trans:		transparentize($navigation-background-color, $color-trans-amount)
+	),
+	footer-background-color: (
+		base:		$footer-background-color,
+		soft:		lighten($footer-background-color, $color-shade-amount),
+		strong:		darken($navigation-background-color, $color-shade-amount),
+		trans:		transparentize($footer-background-color, $color-trans-amount)
+	),
+	footer-widget-background-color: (
+		base:		$footer-widget-background-color,
+		soft:		lighten($footer-widget-background-color, $color-shade-amount),
+		strong:		darken($footer-widget-background-color, $color-shade-amount),
+		trans:		transparentize($footer-widget-background-color, $color-trans-amount)
 	),
 );
 

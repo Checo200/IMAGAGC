@@ -23,9 +23,9 @@
 /* Site Footer */
 
 .site-footer {
-	background: color(dark, strong);
+	background: color(footer-background-color, base);
 	color: color(light, strong);
-	padding: space(divider, m);
+	padding: space(divider, xs);
 
 	p {
 		color: color(light, strong);
@@ -46,6 +46,7 @@
 /* Footer Widgets */
 
 .footer-widgets {
+	background: color(footer-widget-background-color, base);
 	padding: space(divider, m);
 
 	@extend %box-shadow-top;
