@@ -75,6 +75,7 @@ $ composer install
 2.  Edit `wpackio.server.js` that handles the development server:
 
 -   `proxy` should reflect the local development URL, e.g. `http://some-name.local`
+
 -   `distPublicPath` should reflect the absolute URL path of the dist folder, e.g. `/wp-content/themes/your-theme-name/dist/`
     **Add a forward slash at the end otherwise it will not work.**
 
@@ -159,8 +160,7 @@ To fix this try the following:
 ipconfig /all
 ```
 
-1.  Find the &lt;$IP Address> from the Adapter: LAN (Local Area Network). Write down or Copy the &lt;$IP Address and \\$IP6 Address> and continue to step 2.
-
+1.  Find the &lt;$IP Address> from the Adapter: LAN (Local Area Network). Write down or Copy the &lt;$IP Address and \\$IP6 Address> and continue to step 2
 2.  Update the WSL2 host file.
 
 **In WSL 2 use the following commando to open the hostfile from WSL2:**
