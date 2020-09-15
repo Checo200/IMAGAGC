@@ -83,5 +83,16 @@ return array(
 				),
 			),
 		),
+		'footer-4' => array(
+			array(
+				'type' => 'text',
+				'args' => array(
+					'title'  => 'Footer 4',
+					'text'   => '<p>Maecenas convallis ultrices ex ut bibendum. Nam placerat mi ac purus maximus, nec tincidunt elit posuere. Donec facilisis urna id egestas hendrerit. Etiam in leo ullamcorper, efficitur libero et, egestas quam.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				),
+			),
+		),
 	),
 );

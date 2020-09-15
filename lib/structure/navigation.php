@@ -156,3 +156,109 @@ add_action(
 	},
 	10
 );
+
+/**
+ * Reduce topnav navigation menu to one level depth
+ *
+ * @param array $args Original menu options.
+ * @return array Menu options with depth set to 1.
+ */
+add_filter(
+	'wp_nav_menu_args',
+	function ( $args ) {
+
+		if ( 'topnav' !== $args['theme_location'] ) {
+
+			return $args;
+		}
+
+		$args['depth'] = 1;
+
+		return $args;
+	}
+);
+
+/* Add attributes for navigation elements */
+add_filter( 'genesis_attr_nav-custom', 'genesis_attributes_nav' );
+
+/**
+ * Add ID markup to custom navigation
+ *
+ * @param array $attributes Existing attributes for custom navigation element.
+ * @return array Amended attributes for custom navigation element.
+ */
+add_filter(
+	'genesis_attr_nav-custom',
+	function ( $attributes ) {
+
+		$attributes['id'] = 'genesis-nav-topnav';
+
+		return $attributes;
+	}
+);
+
+/**
+ * Add skip link for topnav navigation
+ *
+ * @param array $links Existing skiplinks.
+ * @return array Amended skiplinks.
+ */
+add_filter(
+	'genesis_skip_links_output',
+	function ( $links ) {
+
+		if ( genesis_nav_menu_supported( 'topnav' ) &&
+			has_nav_menu( 'topnav' ) ) :
+
+			$links['genesis-nav-topnav'] = __( 'Skip to topnav navigation', 'imagagc' );
+
+		endif;
+
+		return $links;
+	}
+);
+
+/* Display the topnav menu */
+add_action(
+	'genesis_before_header',
+	function () {
+
+		// Do nothing if menu not supported.
+		if ( ! genesis_nav_menu_supported( 'topnav' ) ||
+			! has_nav_menu( 'topnav' ) ) :
+
+			return;
+
+		endif;
+
+		$class = 'menu genesis-nav-menu menu-topnav';
+
+		if ( genesis_superfish_enabled() ) :
+
+			$class .= ' js-superfish';
+
+		endif;
+
+		$menu_name = 'topnav';
+		$locations = get_nav_menu_locations();
+		$menu_id   = $locations[ $menu_name ];
+		wp_get_nav_menu_object( $menu_id );
+
+		$menu_obj = wp_get_nav_menu_object( $menu_id );
+
+		echo '<div id="topnav-menu-wrapper" class="topnav-menu-wrapper">';
+
+		genesis_nav_menu(
+			array(
+				'theme_location'  => 'topnav',
+				'menu_class'      => $class,
+				'container'       => 'div',
+				'container_class' => 'wrap',
+			)
+		);
+
+		echo '</div>';
+
+	},
+	10
+);

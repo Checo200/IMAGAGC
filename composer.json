@@ -21,12 +21,14 @@
 		"wpackio/enqueue": "^2.2.0"
 	},
 	"require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "*",
+        "phpcompatibility/php-compatibility": "*",
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
-		"symplify/coding-standard": "*",
-		"phpcompatibility/php-compatibility": "*",
-		"wp-coding-standards/wpcs": "*",
-		"automattic/vipwpcs": "*"
+		"roave/security-advisories": "*",
+		"dealerdirect/qa-tools ": "*"
 	},
+
 	"scripts": {
 		"phpcs": " ./vendor/bin/phpcs ",
 		"phpcbf": "./vendor/bin/phpcbf --report=diff -vv"

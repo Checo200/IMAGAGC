@@ -36,7 +36,7 @@ return array(
 		'flex-width'  => true,
 	),
 	'genesis-after-entry-widget-area' => '',
-	'genesis-footer-widgets'          => 3,
+	'genesis-footer-widgets'          => 4,
 	'genesis-menus'                   => array(
 		'primary'   => __( 'Header Right', 'imagagc' ),
 		'secondary' => __( 'Header Left', 'imagagc' ),

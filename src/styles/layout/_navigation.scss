@@ -17,15 +17,16 @@
 	width: 100%;
 
 	a {
-		color: color(dark, strong);
+		color: $brand-color-blue;
 		display: block;
 		outline-offset: -1px;
 		padding-bottom: space(xxs);
 		padding-top: space(xxs);
 		text-decoration: none;
 		text-transform: uppercase;
+		font-weight: 900;
 
-		@extend %font-size-s;
+		@extend %font-size-m;
 	}
 
 	.sub-menu {
@@ -419,13 +420,14 @@
 
 	.wrap {
 		text-align: left;
+		margin-left: 8rem;
 
 		@include mq($until: phone) {
 			text-align: center;
 		}
 
 		@include mq($from: tablet) {
-			text-align: right;
+			text-align: left;
 		}
 	}
 }
@@ -469,10 +471,10 @@
 		width: 100%;
 
 		.wrap {
-			text-align: left;
+			text-align: center;
 
 			@include mq($from: tablet) {
-				text-align: right;
+				text-align: center;
 			}
 		}
 
@@ -487,7 +489,7 @@
 			.menu-item {
 
 				> a {
-					color: color(dark, strong);
+					color: $white-color;
 					display: block;
 					outline-offset: -1px;
 					padding-bottom: space(xxs);
@@ -495,7 +497,7 @@
 					text-decoration: none;
 					text-transform: none;
 
-					@extend %font-size-s;
+					@extend %font-size-m;
 				}
 			}
 		}
