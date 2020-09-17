@@ -30,7 +30,7 @@ $imagagc_accent_color = get_theme_mod(
 );
 
 return array(
-	'fonts-url'            => 'https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@400;500;700&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap',
+	'fonts-url'            => 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap',
 	'ionicons'             => 'https://unpkg.com/ionicons@5.0.0/dist/ionicons.js',
 	'content-width'        => 1800,
 	'link-color'           => $imagagc_link_color,
@@ -40,6 +40,11 @@ return array(
 			'name'  => __( 'Accent', 'imagagc' ),
 			'slug'  => 'accent',
 			'color' => $imagagc_accent_color,
+		),
+		array(
+			'name'  => __( 'Link', 'imagagc' ),
+			'slug'  => 'link',
+			'color' => $imagagc_link_color,
 		),
 		array(
 			'name'  => __( 'White', 'imagagc' ),
@@ -95,7 +100,7 @@ return array(
 		array(
 			'name'  => __( 'Brand Color Green', 'imagagc' ),
 			'slug'  => 'brand-color-green',
-			'color' => ' #9fc760',
+			'color' => '#9fc760',
 		),
 		array(
 			'name'  => __( 'Brand Color Red', 'imagagc' ),

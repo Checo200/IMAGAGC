@@ -8,13 +8,13 @@
 /* Typographical Elements */
 
 a {
-	color: color(success, base);
+	color: color(brand-color-blue, base);
 	text-decoration: none;
 	transition: $base-transition;
 
 	&:focus,
 	&:hover {
-		color: inherit;
+		color: color(brand-color-orange, base);
 	}
 
 	&.post-edit-link {
@@ -80,7 +80,7 @@ hr {
 
 b,
 strong {
-	font-weight: 700;
+	font-weight: 800;
 }
 
 em,
