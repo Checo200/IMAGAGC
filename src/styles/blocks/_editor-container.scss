@@ -33,3 +33,16 @@
 		}
 	}
 }
+
+/* Widget editor block area */
+
+/** Change the color of the widget panel in the backend editor.
+* Based on the footer color assigned in the variable scss.
+* This way the backend blocks will look more like the
+* actual front-end widget footer. This can be wanted if for example:
+* The footer is black and the text color is white. Since this will result
+* in a empty looking block, even though the block has content.
+*/
+.wp-block-widget-area.components-panel {
+	background: color(footer-background-color, base);
+}

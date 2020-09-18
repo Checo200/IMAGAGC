@@ -37,7 +37,7 @@
 
 			&:focus,
 			&:hover {
-				color: color(light, soft);
+				color: color(brand-color-orange, soft);
 			}
 		}
 	}
@@ -47,7 +47,7 @@
 
 .footer-widgets {
 	background: color(footer-widget-background-color, base);
-	padding: space(divider, m);
+	padding: 2rem 0 0 0;
 
 	@extend %box-shadow-top;
 
@@ -59,6 +59,7 @@
 
 	.wrap {
 		flex-wrap: wrap;
+		padding: 0 20rem;
 
 		@include mq($from: tablet) {
 			flex-wrap: nowrap;
@@ -83,6 +84,13 @@
 			flex-basis: 0;
 			flex-grow: 1;
 			margin-bottom: 0;
+		}
+
+		span {
+
+			> a {
+				color: color-white;
+			}
 		}
 
 		.menu {

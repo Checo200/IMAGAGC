@@ -76,7 +76,7 @@
 
 				&:focus,
 				&:hover {
-					color: color(accent, base);
+					color: color(brand-color-orange, base);
 				}
 			}
 
@@ -87,7 +87,7 @@
 
 					> a,
 					> button {
-						color: color(accent, base);
+						color: color(brand-color-orange, base);
 					}
 				}
 
@@ -96,7 +96,7 @@
 					> a,
 					> a:focus,
 					> a:hover {
-						color: color(accent, base);
+						color: color(brand-color-orange, base);
 					}
 				}
 			}
@@ -144,7 +144,7 @@
 
 			> a,
 			> button {
-				color: color(accent, base);
+				color: color(brand-color-orange, base);
 			}
 		}
 
@@ -162,7 +162,7 @@
 		&.current-menu-item {
 
 			> a {
-				color: color(accent, base);
+				color: color(brand-color-orange, base);
 				text-decoration: none;
 			}
 		}
@@ -397,7 +397,7 @@
 				padding-top: space(s);
 
 				@include mq($from: tablet) {
-					padding: space(xs) 1.5rem;
+					padding: space(xs) 1rem;
 				}
 			}
 
@@ -407,7 +407,7 @@
 
 					@include mq($from: tablet) {
 						margin: space(divider, xxs);
-						padding: space(xxs) 1.5rem;
+						padding: space(xxs) 1rem;
 					}
 				}
 			}
@@ -420,7 +420,6 @@
 
 	.wrap {
 		text-align: left;
-		margin-left: 8rem;
 
 		@include mq($until: phone) {
 			text-align: center;
@@ -428,6 +427,11 @@
 
 		@include mq($from: tablet) {
 			text-align: left;
+		}
+
+		@include mq($from: desktop) {
+			text-align: left;
+			padding-left: 6rem;
 		}
 	}
 }
@@ -497,7 +501,12 @@
 					text-decoration: none;
 					text-transform: none;
 
-					@extend %font-size-m;
+					@extend %font-size-s;
+
+					:focus,
+					:hover {
+						color: color(brand-color-orange, soft);
+					}
 				}
 			}
 		}

@@ -116,12 +116,12 @@
 	.title-area {
 		height: 6rem;
 		margin-left: space(xs);
-		max-width: 68%;
+		max-width: 200px;
 		padding: 0;
 		width: 100%;
 
 		@include mq($from: small-phone) {
-			max-width: 250px;
+			max-width: 200px;
 			text-align: inherit;
 		}
 
