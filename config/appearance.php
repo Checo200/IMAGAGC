@@ -98,9 +98,14 @@ return array(
 		),
 		// Brand colors.
 		array(
-			'name'  => __( 'Brand Color Green', 'imagagc' ),
-			'slug'  => 'brand-color-green',
-			'color' => '#9fc760',
+			'name'  => __( 'Brand Color Green Primary', 'imagagc' ),
+			'slug'  => 'brand-color-green-primary',
+			'color' => '#70a936',
+		),
+		array(
+			'name'  => __( 'Brand Color Green Secondary', 'imagagc' ),
+			'slug'  => 'brand-color-green-secondary',
+			'color' => '#85bb4a',
 		),
 		array(
 			'name'  => __( 'Brand Color Red', 'imagagc' ),
@@ -110,12 +115,32 @@ return array(
 		array(
 			'name'  => __( 'Brand Color Orange', 'imagagc' ),
 			'slug'  => 'brand-color-orange',
-			'color' => '#f79158',
+			'color' => '#ff8e01',
 		),
 		array(
 			'name'  => __( 'Brand Color Blue', 'imagagc' ),
 			'slug'  => 'brand-color-blue',
-			'color' => '#72b8d0',
+			'color' => '#81d3e6',
+		),
+		array(
+			'name'  => __( 'Brand Color Brown Primary', 'imagagc' ),
+			'slug'  => 'brand-color-brown-primary',
+			'color' => '#7f4421',
+		),
+		array(
+			'name'  => __( 'Brand Color Brown Secondary', 'imagagc' ),
+			'slug'  => 'brand-color-brown-secondary',
+			'color' => '#915634',
+		),
+		array(
+			'name'  => __( 'Brand Color Brown Tertiary', 'imagagc' ),
+			'slug'  => 'brand-color-brown-tertiary',
+			'color' => '#562c14',
+		),
+		array(
+			'name'  => __( 'Brand Color Yellow', 'imagagc' ),
+			'slug'  => 'brand-color-yellow',
+			'color' => '#ffd008',
 		),
 
 	),

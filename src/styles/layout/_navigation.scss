@@ -40,9 +40,12 @@
 		width: 100%;
 		z-index: 99;
 
+		@include mq($until: tablet) {
+			background: #a97f49c4;
+		}
+
 		@include mq($from: tablet) {
-			background: color(dark, base);
-			border: 1px solid color(dark, base);
+			background: rgba(255, 255, 255, 0.8);
 			border-radius: $base-border-radius;
 			left: 50%;
 			opacity: 0;
@@ -50,7 +53,7 @@
 			padding-bottom: space(xxs);
 			position: absolute;
 			transform: translateX(-50%);
-			width: 15rem;
+			width: 17rem;
 
 			@include box-shadow (0, 0, 2rem, color(shadow), false);
 
@@ -72,7 +75,7 @@
 			}
 
 			a {
-				color: color(light, soft);
+				color: color(dark, base);
 
 				&:focus,
 				&:hover {
@@ -105,7 +108,7 @@
 				color: color(dark, base);
 
 				&::before {
-					content: "\f139";
+					content: "\f347";
 					right: 5px;
 					top: calc(50% - 3px);
 				}
@@ -130,6 +133,8 @@
 				line-height: line-height(xs);
 				padding-right: 0;
 				width: 15rem;
+				border-bottom: 1px solid $brand-color-orange;
+				font-size: 14px;
 			}
 		}
 	}
@@ -303,13 +308,13 @@
 }
 
 .sub-menu-toggle {
-	color: color(dark, base);
+	color: color(brand-color-blue, base);
 	float: right;
 	height: auto;
 	min-width: 0;
-	padding: space(s);
+
 	position: absolute;
-	right: 0;
+	right: -16px;
 	top: 0;
 	width: 100%;
 	z-index: 100;
@@ -322,10 +327,21 @@
 		text-rendering: auto;
 		transition: transform 0.25s ease-in-out;
 		width: auto;
+		font-size: 40px;
 	}
 
 	&.activated::before {
 		content: "\f460";
+	}
+
+	@include mq($until: tablet) {
+		padding: space(s);
+		right: -85px;
+		top: 0;
+
+		&::before {
+			font-size: 30px;
+		}
 	}
 
 	@include mq($from: tablet) {
@@ -364,8 +380,7 @@
 /* Header Menu */
 
 .nav-primary,
-.nav-secondary,
-.nav-topnav {
+.nav-secondary {
 	clear: left;
 	float: left;
 	width: 100%;
@@ -419,19 +434,19 @@
 .nav-primary {
 
 	.wrap {
-		text-align: left;
+		text-align: center;
 
 		@include mq($until: phone) {
 			text-align: center;
 		}
 
 		@include mq($from: tablet) {
-			text-align: left;
+			text-align: center;
 		}
 
 		@include mq($from: desktop) {
-			text-align: left;
-			padding-left: 6rem;
+			text-align: center;
+			padding-right: 10rem;
 		}
 	}
 }
@@ -459,7 +474,7 @@
 			display: flex;
 			flex-wrap: nowrap;
 			justify-content: space-between;
-			padding: space(column, s);
+			padding: space(column, m);
 
 			// Prevent pseudo-elements from impacting the space-between calculation.
 			&::after,
@@ -496,12 +511,19 @@
 					color: $white-color;
 					display: block;
 					outline-offset: -1px;
+					padding-left: space(xs);
 					padding-bottom: space(xxs);
 					padding-top: space(xxs);
 					text-decoration: none;
 					text-transform: none;
+					font-weight: 600;
 
 					@extend %font-size-s;
+
+					@include mq($until: tablet) {
+
+						font-size: italic;
+					}
 
 					:focus,
 					:hover {
@@ -569,6 +591,23 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+/* Outline menu item: aanmelden */
+#menu-item-44 {
+	border-style: solid;
+	border-color: $brand-color-blue;
+	border-width: 3px;
+	border-radius: 5px;
+
+	a {
+
+		&:hover,
+		&:focus {
+			background-color: $brand-color-blue;
+			color: $white-color;
 		}
 	}
 }

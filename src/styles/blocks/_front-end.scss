@@ -183,11 +183,17 @@ $color-palette: (
 	success: color(success, base),
 	warning: color(warning, base),
 	star: color(star, base),
+
 	// Brand colors
-	brand-color-green: color(brand-color-green, base),
 	brand-color-red: color(brand-color-red, base),
 	brand-color-orange: color(brand-color-orange, base),
 	brand-color-blue: color(brand-color-blue, base),
+	brand-color-green-primary: color(brand-color-green-primary, base),
+	brand-color-green-secondary: color(brand-color-green-secondary, base),
+	brand-color-brown-primary: color(brand-color-brown-primary, base),
+	brand-color-brown-secondary: color(brand-color-brown-secondary, base),
+	brand-color-brown-tertiary: color(brand-color-brown-tertiary, base),
+	brand-color-yellow: color(brand-color-yellow, base),
 
 	// Additional colors
 	dark-strong: color(dark, strong),
@@ -203,15 +209,26 @@ $color-palette: (
 	warning-strong: color(warning, strong),
 	star-soft: color(star, soft),
 	star-strong: color(star, strong),
+
 	// Brand colors
-	brand-color-green-soft: color(brand-color-green, soft),
-	brand-color-green-strong: color(brand-color-green, strong),
 	brand-color-red-soft: color(brand-color-red, soft),
 	brand-color-red-strong: color(brand-color-red, strong),
 	brand-color-orange-soft: color(brand-color-orange, soft),
 	brand-color-orange-strong: color(brand-color-orange, strong),
 	brand-color-blue-soft: color(brand-color-blue, soft),
 	brand-color-blue-strong: color(brand-color-blue, strong),
+	brand-color-green-primary-soft: color(brand-color-green-primary, soft),
+	brand-color-green-primary-strong: color(brand-color-green-primary, strong),
+	brand-color-green-secondary-soft: color(brand-color-green-secondary, soft),
+	brand-color-green-secondary-strong: color(brand-color-green-secondary, strong),
+	brand-color-brown-primary-soft: color(brand-color-brown-primary, soft),
+	brand-color-brown-primary-strong: color(brand-color-brown-primary, strong),
+	brand-color-brown-secondary-soft: color(brand-color-brown-secondary, soft),
+	brand-color-brown-secondary-strong: color(brand-color-brown-secondary, strong),
+	brand-color-brown-tertiary-soft: color(brand-color-brown-tertiary, soft),
+	brand-color-brown-tertiary-strong: color(brand-color-brown-tertiary, strong),
+	brand-color-yellow-soft: color(brand-color-yellow, soft),
+	brand-color-yellow-strong: color(brand-color-yellow, strong),
 );
 
 @each $name, $color in $color-palette {

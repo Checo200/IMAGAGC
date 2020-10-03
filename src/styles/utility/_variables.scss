@@ -226,27 +226,33 @@ $success:			#00a37f;
 $warning:			#7c6249;
 
 /* Brand colors */
-$brand-color-green: #9fc760;
+$brand-color-green-primary: #70a936;
+$brand-color-green-secondary: #85bb4a;
 $brand-color-red:	#ef5160;
-$brand-color-orange:#f79158;
-$brand-color-blue:	#72b8d0;
+$brand-color-orange:#ff8e01;
+$brand-color-brown-primary: #7f4421;
+$brand-color-brown-secondary:#915634;
+$brand-color-brown-tertiary:#562c14;
+$brand-color-blue:	#81d3e6;
+$brand-color-yellow: #ffd008;
 
 /* Standard colors */
 $white-color:	    #fff;
 $black-color:       #000;
 
 /* Theme styling colors */
-$navigation-background-color:  		$white-color;
-$footer-background-color:      		$dark;
-$footer-widget-background-color: 	$dark;
-$topnav-background-color:      		$brand-color-blue;
+$navigation-background-color:       $white-color;
+$submenu-background-color:          $white-color;
+$footer-background-color:           $dark;
+$footer-widget-background-color:    $dark;
+$topnav-background-color:           $brand-color-blue;
 
 // Variations
 $color-shade-amount: 15%;
 $color-strong-shade-amount: 85%;
 $color-trans-amount: 0.7;
-$color-strong-trans-amount: 0.9;
-$color-extrastrong-trans-amount: 0.95;
+$color-strong-trans-amount: 0.8;
+$color-extrastrong-trans-amount: 0.9;
 
 // Colors Map
 $base-colors: (
@@ -306,11 +312,17 @@ $base-colors: (
 	),
 
 	// Brand colors - nested values
-	brand-color-green: (
-		base:		$brand-color-green,
-		soft:		lighten($brand-color-green, $color-shade-amount),
-		strong: 	darken($brand-color-green, $color-shade-amount),
-		trans: 		transparentize($brand-color-green, $color-trans-amount)
+	brand-color-green-primary: (
+		base:		$brand-color-green-primary,
+		soft:		lighten($brand-color-green-primary, $color-shade-amount),
+		strong: 	darken($brand-color-green-primary, $color-shade-amount),
+		trans: 		transparentize($brand-color-green-primary, $color-trans-amount)
+	),
+	brand-color-green-secondary: (
+		base:		$brand-color-green-secondary,
+		soft:		lighten($brand-color-green-secondary, $color-shade-amount),
+		strong: 	darken($brand-color-green-secondary, $color-shade-amount),
+		trans: 		transparentize($brand-color-green-secondary, $color-trans-amount)
 	),
 	brand-color-red: (
 		base:		$brand-color-red,
@@ -330,9 +342,33 @@ $base-colors: (
 		strong: 	darken($brand-color-blue, $color-shade-amount),
 		trans: 		transparentize($brand-color-blue, $color-trans-amount)
 	),
+	brand-color-brown-primary: (
+		base:		$brand-color-brown-primary,
+		soft:		lighten($brand-color-brown-primary, $color-shade-amount),
+		strong: 	darken($brand-color-brown-primary, $color-shade-amount),
+		trans: 		transparentize($brand-color-brown-primary, $color-trans-amount)
+	),
+	brand-color-brown-secondary: (
+		base:		$brand-color-brown-secondary,
+		soft:		lighten($brand-color-brown-secondary, $color-shade-amount),
+		strong: 	darken($brand-color-brown-secondary, $color-shade-amount),
+		trans: 		transparentize($brand-color-brown-secondary, $color-trans-amount)
+	),
+	brand-color-brown-tertiary: (
+		base:		$brand-color-brown-tertiary,
+		soft:		lighten($brand-color-brown-tertiary, $color-shade-amount),
+		strong: 	darken($brand-color-brown-tertiary, $color-shade-amount),
+		trans: 		transparentize($brand-color-brown-tertiary, $color-trans-amount)
+	),
+	brand-color-yellow: (
+		base:		$brand-color-yellow,
+		soft:		lighten($brand-color-yellow, $color-shade-amount),
+		strong: 	darken($brand-color-yellow, $color-shade-amount),
+		trans: 		transparentize($brand-color-yellow, $color-trans-amount)
+	),
 
 	// Theme styling - nested values
-	topnav-background-colorr: (
+	topnav-background-color: (
 		base:		$topnav-background-color,
 		soft:		lighten($topnav-background-color, $color-shade-amount),
 		strong:		darken($topnav-background-color, $color-shade-amount),
@@ -343,6 +379,12 @@ $base-colors: (
 		soft:		lighten($navigation-background-color, $color-shade-amount),
 		strong:		darken($navigation-background-color, $color-shade-amount),
 		trans:		transparentize($navigation-background-color, $color-trans-amount)
+	),
+	submenu-background-color: (
+		base:		$submenu-background-color,
+		soft:		lighten($submenu-background-color, $color-shade-amount),
+		strong:		darken($submenu-background-color, $color-shade-amount),
+		trans:		transparentize($submenu-background-color, $color-strong-trans-amount)
 	),
 	footer-background-color: (
 		base:		$footer-background-color,

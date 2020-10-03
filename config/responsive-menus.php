@@ -25,6 +25,7 @@ return array(
 			'combine' => array(
 				'.nav-secondary',
 				'.nav-primary',
+				'.nav-topnav',
 			),
 			'others'  => array(),
 		),
