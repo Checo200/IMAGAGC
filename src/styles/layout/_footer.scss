@@ -55,6 +55,10 @@
 	.widget {
 		display: flex;
 		justify-content: center;
+
+		@include mq($until: tablet) {
+			flex-direction: column;
+		}
 	}
 
 	.wrap {
@@ -76,7 +80,11 @@
 		text-align: left;
 
 		&:last-of-type {
-			margin-bottom: 0;
+			margin-bottom: 30px;
+		}
+
+		@include mq($until: tablet) {
+			padding: 0 30% 0 30%;
 		}
 
 		@include mq($from: tablet) {

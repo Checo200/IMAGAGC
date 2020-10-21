@@ -31,7 +31,6 @@ $imagagc_accent_color = get_theme_mod(
 
 return array(
 	'fonts-url'            => 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap',
-	'ionicons'             => 'https://unpkg.com/ionicons@5.0.0/dist/ionicons.js',
 	'content-width'        => 1800,
 	'link-color'           => $imagagc_link_color,
 	'default-colors'       => $imagagc_default_colors,

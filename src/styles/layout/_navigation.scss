@@ -17,7 +17,7 @@
 	width: 100%;
 
 	a {
-		color: $brand-color-blue;
+		color: $brand-color-brown-secondary;
 		display: block;
 		outline-offset: -1px;
 		padding-bottom: space(xxs);
@@ -41,7 +41,7 @@
 		z-index: 99;
 
 		@include mq($until: tablet) {
-			background: #a97f49c4;
+			background: #d0d0d0c4;
 		}
 
 		@include mq($from: tablet) {
@@ -234,9 +234,8 @@
 .genesis-responsive-menu {
 
 	@include mq($until: tablet) {
-		background: color(dark, base);
+		background: white-color;
 		min-height: 100vh;
-		overflow: scroll;
 		padding: space(stack, m);
 		text-align: left;
 
@@ -253,6 +252,10 @@
 		.sub-menu {
 			padding-left: space(s);
 			text-align: left;
+
+			@include mq($until: tablet) {
+				padding-left: 33.333%;
+			}
 		}
 	}
 
@@ -308,13 +311,13 @@
 }
 
 .sub-menu-toggle {
-	color: color(brand-color-blue, base);
+	color: color(brand-color-brown-primary, base);
 	float: right;
 	height: auto;
 	min-width: 0;
 
 	position: absolute;
-	right: -16px;
+	right: -8px;
 	top: 0;
 	width: 100%;
 	z-index: 100;
@@ -598,15 +601,19 @@
 /* Outline menu item: aanmelden */
 #menu-item-44 {
 	border-style: solid;
-	border-color: $brand-color-blue;
+	border-color: $brand-color-brown-primary;
 	border-width: 3px;
 	border-radius: 5px;
+
+	@include mq($until: tablet) {
+		margin: 0 50px 0 50px;
+	}
 
 	a {
 
 		&:hover,
 		&:focus {
-			background-color: $brand-color-blue;
+			background-color: $brand-color-brown-tertiary;
 			color: $white-color;
 		}
 	}
