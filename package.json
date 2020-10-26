@@ -14,7 +14,7 @@
 		"stylelint": "^13.7.2",
 		"stylelint-config-wordpress": "^17.0.0",
 		"stylelint-webpack-plugin": "^2.1.0",
-		"webpack": "^5.0.0"
+		"webpack": "^5.2.0"
 	},
 	"scripts": {
 		"bootstrap": "wpackio-scripts bootstrap",
