@@ -10,10 +10,10 @@ a.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	background-color: color(dark, base);
+	background-color: color(brand-color-orange, base);
 	border: none;
 	border-radius: $base-border-radius;
-	color: color(light, soft);
+	color: $white-color;
 	cursor: pointer;
 	font-weight: 700;
 	padding: space(inset-squish, xs);
@@ -124,3 +124,33 @@ input[type="submit"] {
 		}
 	}
 }
+
+.has-button-style {
+	background: color(brand-color-orange, base);
+	border-radius: $base-border-radius;
+
+	@include mq($until: tablet) {
+		margin: 0 50px 0 50px;
+	}
+
+	&:hover,
+	&:focus {
+		background: color(brand-color-orange, light);
+		transform: translateY(-10%);
+		transition: $base-transition;
+	}
+
+	a {
+
+		&:hover,
+		&:focus {
+			color: $white-color !important; // Important needed to overwrite the hover for navigation links.
+			border-radius: $base-border-radius;
+		}
+
+		span {
+			color: $white-color;
+		}
+	}
+}
+

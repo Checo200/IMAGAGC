@@ -13,3 +13,6 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+// Disable all Google Font enqueuing
+add_filter( 'stackable_enqueue_font', '__return_false' );

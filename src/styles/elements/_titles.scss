@@ -4,15 +4,15 @@
 .pagination-previous,
 .pagination-next,
 .widget-title {
-	color: color(dark, strong);
+	color: color(brand-color-dark-blue, base);
 
 	> a {
-		color: color(dark, strong);
+		color: color(brand-color-orange, base);
 		text-decoration: none;
 
 		&:focus,
 		&:hover {
-			color: color(dark, soft);
+			color: color(brand-color-orange, soft);
 		}
 	}
 }
@@ -21,4 +21,5 @@
 .entry-title,
 .page-title {
 	text-align: center;
+	line-height: 1.2;
 }

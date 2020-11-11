@@ -17,14 +17,13 @@
 	width: 100%;
 
 	a {
-		color: $brand-color-brown-secondary;
+		color: $dark;
 		display: block;
 		outline-offset: -1px;
 		padding-bottom: space(xxs);
 		padding-top: space(xxs);
 		text-decoration: none;
-		text-transform: uppercase;
-		font-weight: 900;
+		font-weight: 400;
 
 		@extend %font-size-m;
 	}
@@ -80,6 +79,21 @@
 				&:focus,
 				&:hover {
 					color: color(brand-color-orange, base);
+
+					transition: all 0.2s ease-in-out;
+
+					&::before,
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: -10px;
+						height: 5px;
+						margin: 5px 0 0;
+						transition: all 0.2s ease-in-out;
+						transition-duration: 0.75s;
+						opacity: 0;
+						background-color: color(brand-color-orange, base);
+					}
 				}
 			}
 
@@ -100,6 +114,22 @@
 					> a:focus,
 					> a:hover {
 						color: color(brand-color-orange, base);
+
+						transition: all 0.2s ease-in-out;
+
+
+						&::before,
+						&::after {
+							content: "";
+							position: absolute;
+							bottom: -10px;
+							height: 5px;
+							margin: 5px 0 0;
+							transition: all 0.2s ease-in-out;
+							transition-duration: 0.75s;
+							opacity: 0;
+							background-color: color(brand-color-orange, base);
+						}
 					}
 				}
 			}
@@ -169,6 +199,21 @@
 			> a {
 				color: color(brand-color-orange, base);
 				text-decoration: none;
+
+				transition: all 0.2s ease-in-out;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: -10px;
+					height: 5px;
+					margin: 5px 0 0;
+					transition: all 0.2s ease-in-out;
+					transition-duration: 0.75s;
+					opacity: 0;
+					background-color: color(brand-color-orange, base);
+				}
 			}
 		}
 
@@ -234,7 +279,7 @@
 .genesis-responsive-menu {
 
 	@include mq($until: tablet) {
-		background: white-color;
+		background: $white-color;
 		min-height: 100vh;
 		padding: space(stack, m);
 		text-align: left;
@@ -311,7 +356,7 @@
 }
 
 .sub-menu-toggle {
-	color: color(brand-color-brown-primary, base);
+	color: color(brand-color-blue-primary, base);
 	float: right;
 	height: auto;
 	min-width: 0;
@@ -415,7 +460,7 @@
 				padding-top: space(s);
 
 				@include mq($from: tablet) {
-					padding: space(xs) 1rem;
+					padding: space(xs) 2rem;
 				}
 			}
 
@@ -514,7 +559,7 @@
 					color: $white-color;
 					display: block;
 					outline-offset: -1px;
-					padding-left: space(xs);
+					padding-left: space(l);
 					padding-bottom: space(xxs);
 					padding-top: space(xxs);
 					text-decoration: none;
@@ -524,13 +569,27 @@
 					@extend %font-size-s;
 
 					@include mq($until: tablet) {
-
 						font-size: italic;
 					}
 
 					:focus,
 					:hover {
 						color: color(brand-color-orange, soft);
+
+						transition: all 0.2s ease-in-out;
+
+						&::before,
+						&::after {
+							content: "";
+							position: absolute;
+							bottom: -10px;
+							height: 5px;
+							margin: 5px 0 0;
+							transition: all 0.2s ease-in-out;
+							transition-duration: 0.75s;
+							opacity: 0;
+							background-color: color(brand-color-orange, base);
+						}
 					}
 				}
 			}
@@ -594,27 +653,6 @@
 					}
 				}
 			}
-		}
-	}
-}
-
-/* Outline menu item: aanmelden */
-#menu-item-44 {
-	border-style: solid;
-	border-color: $brand-color-brown-primary;
-	border-width: 3px;
-	border-radius: 5px;
-
-	@include mq($until: tablet) {
-		margin: 0 50px 0 50px;
-	}
-
-	a {
-
-		&:hover,
-		&:focus {
-			background-color: $brand-color-brown-tertiary;
-			color: $white-color;
 		}
 	}
 }

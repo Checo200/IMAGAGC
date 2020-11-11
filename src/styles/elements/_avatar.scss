@@ -6,6 +6,8 @@
 	height: space(m);
 	margin: space(right-bottom, xs);
 	width: space(m);
+	border: 1px solid color(brand-color-orange, base);
+	box-sizing: border-box;
 }
 
 .alignright {

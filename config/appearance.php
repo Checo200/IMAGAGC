@@ -63,7 +63,7 @@ return array(
 		array(
 			'name'  => __( 'Dark', 'imagagc' ),
 			'slug'  => 'dark',
-			'color' => '#28353D',
+			'color' => '#022840',
 		),
 		array(
 			'name'  => __( 'Black', 'imagagc' ),
@@ -99,7 +99,7 @@ return array(
 		array(
 			'name'  => __( 'Brand Color Green Primary', 'imagagc' ),
 			'slug'  => 'brand-color-green-primary',
-			'color' => '#70a936',
+			'color' => '#78cc33',
 		),
 		array(
 			'name'  => __( 'Brand Color Green Secondary', 'imagagc' ),
@@ -114,17 +114,17 @@ return array(
 		array(
 			'name'  => __( 'Brand Color Orange', 'imagagc' ),
 			'slug'  => 'brand-color-orange',
-			'color' => '#ff8e01',
+			'color' => '#fd8e39',
 		),
 		array(
 			'name'  => __( 'Brand Color Blue', 'imagagc' ),
-			'slug'  => 'brand-color-blue',
-			'color' => '#81d3e6',
+			'slug'  => 'brand-color-dark-blue',
+			'color' => '#022840',
 		),
 		array(
 			'name'  => __( 'Brand Color Brown Primary', 'imagagc' ),
-			'slug'  => 'brand-color-brown-primary',
-			'color' => '#7f4421',
+			'slug'  => 'brand-color-blue-primary',
+			'color' => '#3e66fb',
 		),
 		array(
 			'name'  => __( 'Brand Color Brown Secondary', 'imagagc' ),

@@ -5,54 +5,40 @@
 	margin: space(divider, m);
 	text-align: center;
 
-	&.archive-pagination {
-
-		ul {
-
-			li {
-				display: inline;
-
-				a {
-					background-color: color(light, base);
-					color: color(dark, base);
-					cursor: pointer;
-					display: inline-block;
-					font-weight: 700;
-					padding: space(inset-squish, xxs);
-					text-decoration: none;
-
-					@extend %font-size-s;
-
-					&:hover,
-					&:focus {
-						background-color: color(dark, base);
-						color: color(light, soft);
-					}
-				}
-
-				&.active {
-
-					a {
-						background-color: color(dark, base);
-						color: color(light, soft);
-					}
-				}
-			}
-		}
-	}
-
-	/* Single post pagination */
+	&.archive-pagination,
 	&.adjacent-entry-pagination {
-		margin: space(divider, m);
+		display: flex;
+		width: 100%;
+		margin: 0;
+		justify-content: space-between;
+
+		.pagination-wrapper {
+			padding: space(column, s);
+		}
 
 		.pagination-previous,
 		.pagination-next {
-			margin: 0;
 			width: 100%;
-		}
+			background-color: color(brand-color-orange, base);
+			border-radius: 8px;
+			color: $white-color;
+			padding: 1rem;
+			font-weight: 700;
 
-		.pagination-previous {
-			margin: space(stack, s);
+			&:hover,
+			&:focus {
+				background-color: color(brand-color-orange, base);
+				color: $white-color;
+				transform: translateY(-10%);
+				transition: $base-transition;
+			}
+
+			&.active {
+				background-color: color(brand-color-orange, base);
+				color: $white-color;
+				transform: translateY(-10%);
+				transition: $base-transition;
+			}
 		}
 	}
 }

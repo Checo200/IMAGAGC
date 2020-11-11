@@ -45,18 +45,6 @@ add_filter(
 	}
 );
 
-/* Add single post navigation */
-add_action(
-	'genesis_before_while',
-	function () {
-
-		if ( is_singular( 'post' ) ) {
-			genesis_prev_next_post_nav();
-		}
-
-	}
-);
-
 /**
  * Disable comments URL field
  *
@@ -107,3 +95,49 @@ add_action(
 	},
 	5
 );
+
+;
+/**
+ * Display links to previous and next entry.
+ *
+ * @since 2.3.0
+ *
+ * @return void Return early if not singular or post type doesn't support `genesis-adjacent-entry-nav`.
+ */
+
+add_action(
+	'genesis_after_entry',
+	function () {
+
+    if ( ! is_singular( array( 'post' )) ) {
+        return;
+    }
+	?>
+
+	<div class="adjacent-entry-pagination pagination">
+   		<div class="pagination-wrapper">
+    		<?php previous_post_link( '%link', '&laquo; Previous Post' ); ?>
+		</div>
+
+		<div class="pagination-wrapper">
+    		<?php next_post_link( '%link', 'Next Post &raquo;' ); ?>
+		</div>
+	</div>
+
+	<?php
+	},
+	5
+);
+
+add_filter('next_post_link', 'post_link_attributes_next');
+add_filter('previous_post_link', 'post_link_attributes_previous');
+
+function post_link_attributes_next($output) {
+    $code = 'class="pagination-next alignright"';
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}
+
+function post_link_attributes_previous($output) {
+    $code = 'class="pagination-previous alignleft"';
+    return str_replace('<a href=', '<a '.$code.' href=', $output);
+}

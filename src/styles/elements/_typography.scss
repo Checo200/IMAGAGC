@@ -8,13 +8,13 @@
 /* Typographical Elements */
 
 a {
-	color: color(brand-color-blue, base);
+	color: color(brand-color-orange, base);
 	text-decoration: none;
 	transition: $base-transition;
 
 	&:focus,
 	&:hover {
-		color: color(brand-color-orange, base);
+		color: color(brand-color-orange, soft);
 	}
 
 	&.post-edit-link {
@@ -32,6 +32,7 @@ dd,
 pre {
 	margin: space(stack, s);
 	padding: 0;
+	color: #534f4f;
 }
 
 p {
@@ -43,7 +44,7 @@ p {
 
 code,
 pre {
-	color: color(dark, base);
+	color: #534f4f;
 	font-family: $base-font-mono;
 
 	@extend %font-size-s;
@@ -168,7 +169,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: color(dark, strong);
+	color: color(brand-color-dark-blue, base);
 	font-family: $base-font-serif;
 	font-weight: 700;
 	margin: space(stack, s);

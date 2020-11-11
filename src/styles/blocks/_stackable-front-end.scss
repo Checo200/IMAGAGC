@@ -12,3 +12,15 @@
 .ugb-highlight {
 	text-decoration: underline;
 }
+
+.ugb-inner-block--center {
+	--block-max-width: 600px;
+}
+
+.ugb-inner-block--wide {
+	--block-max-width: 1100px;
+}
+
+.ugb-inner-block--full {
+	--block-max-width: 1400px;
+}

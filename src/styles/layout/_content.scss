@@ -1,6 +1,7 @@
 /**
 * Content Area
 *
+*	- Single Post
 *	- Content Header
 *	- Entry Content
 *	- Entry Meta
@@ -9,13 +10,39 @@
 *	- Entry Footer
 */
 
-/* Content Header */
+
+.single-post {
+
+	.site-inner {
+		clear: both;
+		margin: 0 auto 0 auto;
+		padding: space(column, s);
+		z-index: 99;
+
+		@include mq($from: phone) {
+			padding: space(column, m);
+		}
+
+		@include mq($from: large-screen) {
+			max-width: 100vw;
+		}
+
+		.entry-header {
+			margin-top: -4rem;
+			z-index: 10;
+			position: relative;
+			background: #fff;
+			border-radius: 8px;
+		}
+	}
+}
+
 
 body:not(.genesis-breadcrumbs-visible):not(.page-empty) {
 
 	.entry-header,
 	.page-title {
-		margin-top: space(s);
+		padding: 28px;
 	}
 }
 
@@ -135,10 +162,12 @@ p.entry-meta {
 			}
 
 			article {
-				background: color(light, base);
+				background: rgba(255, 255, 255, 0.1);
 				border-radius: $base-border-radius;
 				margin: space(stack, s);
 				padding: space(s);
+				border: 1px solid;
+				border-color: color(brand-color-orange, base);
 
 				@extend %box-shadow;
 
@@ -260,3 +289,4 @@ p.entry-meta {
 		display: none;
 	}
 }
+

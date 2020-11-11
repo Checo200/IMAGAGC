@@ -217,7 +217,7 @@ $base-space: (
 );
 
 /* Colors */
-$dark:				#28353d;
+$dark:				#022840;
 $accent:			#00a37f;
 $info:				#0073e5;
 $danger:			#ed254e;
@@ -226,14 +226,14 @@ $success:			#00a37f;
 $warning:			#7c6249;
 
 /* Brand colors */
-$brand-color-green-primary: #70a936;
+$brand-color-green-primary: #78cc33;
 $brand-color-green-secondary: #85bb4a;
 $brand-color-red:	#ef5160;
-$brand-color-orange:#ff8e01;
-$brand-color-brown-primary: #7f4421;
+$brand-color-orange:#fd8e39;
+$brand-color-blue-primary: #3e66fb;
 $brand-color-brown-secondary:#915634;
 $brand-color-brown-tertiary:#562c14;
-$brand-color-blue:	#81d3e6;
+$brand-color-dark-blue:	#022840;
 $brand-color-yellow: #ffd008;
 
 /* Standard colors */
@@ -243,9 +243,9 @@ $black-color:       #000;
 /* Theme styling colors */
 $navigation-background-color:       $white-color;
 $submenu-background-color:          $white-color;
-$footer-background-color:           $brand-color-brown-tertiary;
-$footer-widget-background-color:    $brand-color-brown-primary;
-$topnav-background-color:           $brand-color-brown-primary;
+$footer-background-color:           $brand-color-dark-blue;
+$footer-widget-background-color:    $brand-color-dark-blue;
+$topnav-background-color:           $brand-color-dark-blue;
 
 // Variations
 $color-shade-amount: 15%;
@@ -258,8 +258,8 @@ $color-extrastrong-trans-amount: 0.9;
 $base-colors: (
 	border:			darken(lighten($dark, $color-strong-shade-amount), $color-shade-amount),
 	outline:		transparentize($dark, $color-trans-amount),
-	shadow:			transparentize(darken($dark, $color-shade-amount), $color-strong-trans-amount),
-	shadow-light:	transparentize(darken($dark, $color-shade-amount), $color-extrastrong-trans-amount),
+	shadow:			transparentize(darken($brand-color-orange, $color-shade-amount), $color-strong-trans-amount),
+	shadow-light:	transparentize(darken($brand-color-orange, $color-shade-amount), $color-extrastrong-trans-amount),
 
 	// Nested values
 	dark: (
@@ -336,17 +336,17 @@ $base-colors: (
 		strong: 	darken($brand-color-orange, $color-shade-amount),
 		trans: 		transparentize($brand-color-orange, $color-trans-amount)
 	),
-	brand-color-blue: (
-		base:		$brand-color-blue,
-		soft:		lighten($brand-color-blue, $color-shade-amount),
-		strong: 	darken($brand-color-blue, $color-shade-amount),
-		trans: 		transparentize($brand-color-blue, $color-trans-amount)
+	brand-color-dark-blue: (
+		base:		$brand-color-dark-blue,
+		soft:		lighten($brand-color-dark-blue, $color-shade-amount),
+		strong: 	darken($brand-color-dark-blue, $color-shade-amount),
+		trans: 		transparentize($brand-color-dark-blue, $color-trans-amount)
 	),
-	brand-color-brown-primary: (
-		base:		$brand-color-brown-primary,
-		soft:		lighten($brand-color-brown-primary, $color-shade-amount),
-		strong: 	darken($brand-color-brown-primary, $color-shade-amount),
-		trans: 		transparentize($brand-color-brown-primary, $color-trans-amount)
+	brand-color-blue-primary: (
+		base:		$brand-color-blue-primary,
+		soft:		lighten($brand-color-blue-primary, $color-shade-amount),
+		strong: 	darken($brand-color-blue-primary, $color-shade-amount),
+		trans: 		transparentize($brand-color-blue-primary, $color-trans-amount)
 	),
 	brand-color-brown-secondary: (
 		base:		$brand-color-brown-secondary,
@@ -402,7 +402,7 @@ $base-colors: (
 
 /* Borders */
 
-$base-border-radius: 3px;
+$base-border-radius: 8px;
 
 /* Transitions */
 
