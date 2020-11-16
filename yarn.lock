@@ -4860,10 +4860,10 @@ hash.js@^1.0.0, hash.js@^1.0.3:
     inherits "^2.0.3"
     minimalistic-assert "^1.0.1"
 
-headroom.js@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/headroom.js/-/headroom.js-0.11.0.tgz#26547a932025e4243abf8ace001b4ce5e110ed20"
-  integrity sha512-yI4ciZRD1WH22wa5uJDg2kMtRvhJwUJWo2l41Eby0BoAD+lzXL98lf5jDFxP4Q5W3HmlrpfItSfmqc3jCtasbw==
+headroom.js@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/headroom.js/-/headroom.js-0.12.0.tgz#e09b466b18d22457f2023fb946ff620e47a5c205"
+  integrity sha512-iXnAafUm3FdzfJ91uixLws2hkKI1jC8bAKK/pt7XYr8Ie1jO7xbK48Ycpl9tUPyBgkzuj1p/PhJS0fy4E/5anA==
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
