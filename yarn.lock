@@ -2184,10 +2184,10 @@ backo2@1.0.2:
   resolved "https://registry.yarnpkg.com/backo2/-/backo2-1.0.2.tgz#31ab1ac8b129363463e35b3ebb69f4dfcfba7947"
   integrity sha1-MasayLEpNjRj41s+u2n038+6eUc=
 
-backstopjs@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-5.0.6.tgz#c2ef7f1e6466ad515d757c77da70314113cc430c"
-  integrity sha512-YNBiWDzgBqxW8UInxYIQlcdp0NQqJr2AeQ0JhTSL3p4DX+fZ7AVF60CX+NuJYekLN5gwGHS8YGgJtwGhQOTEpA==
+backstopjs@^5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/backstopjs/-/backstopjs-5.0.8.tgz#d7d6a21f3cdcd322ed1198d5629f72e9b31f1815"
+  integrity sha512-68Y+BEIHpPI6gtAXAFCin8ddO5s/jgb27NxS5IsOJO8nxf7XGHDdKin9k5bLrFGic/68tnXa+8RAdnXLkoh8kQ==
   dependencies:
     chalk "^1.1.3"
     diverged "^0.1.3"
