@@ -18,7 +18,7 @@
 	"require": {
 		"php": ">=7.3",
 		"composer/installers": "*",
-		"wpackio/enqueue": "^2.2.0"
+		"wpackio/enqueue": "^3.2.1"
 	},
 	"require-dev": {
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
